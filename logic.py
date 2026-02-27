@@ -78,10 +78,6 @@ class RPLogic:
         self.hours_slept = 0.0 # Horas continuas dormido
         # --- Fin Variables Ciclo ---
 
-        # --- Time-awareness state ---
-        self.location_entered_roleplay_time = self.current_roleplay_time
-        self.last_time_awareness_note = ""
-
         # --- Load General State (overwrites defaults) ---
         self._load_state() # Carga tiempo, estado explícito, memoria dinámica, estado de sueño, etc.
 
@@ -110,18 +106,6 @@ class RPLogic:
 
     def _load_state(self):
         """Loads general state (time, explicit state, dynamic memory, sleep cycle state) from JSON."""
-
-        def _safe_float_value(value, default_value, field_name):
-            """Safely coerce saved numeric values; fallback on None/invalid data."""
-            if value is None:
-                self.logger.warning("Saved '%s' is None. Using default %.3f.", field_name, default_value)
-                return float(default_value)
-            try:
-                return float(value)
-            except (TypeError, ValueError):
-                self.logger.warning("Saved '%s' has invalid value '%s'. Using default %.3f.", field_name, value, default_value)
-                return float(default_value)
-
         if os.path.exists(SAVE_STATE_FILE):
             self.logger.info("Save file '%s' found. Attempting to load general state.", SAVE_STATE_FILE)
             try:
@@ -157,17 +141,6 @@ class RPLogic:
                 self.current_topic_focus = state_data.get("current_topic_focus", "Unknown / Resumed")
                 self.logger.info("Loaded explicit state - Pending Location: %s, Topic Focus: %s", self.pending_location_target, self.current_topic_focus)
 
-                entered_time_str = state_data.get("location_entered_roleplay_time")
-                if entered_time_str:
-                    try:
-                        entered_time_clean = entered_time_str.split('+')[0].split('Z')[0].split('.')[0]
-                        self.location_entered_roleplay_time = datetime.datetime.fromisoformat(entered_time_clean)
-                    except ValueError:
-                        self.location_entered_roleplay_time = self.current_roleplay_time
-                else:
-                    self.location_entered_roleplay_time = self.current_roleplay_time
-                self.last_time_awareness_note = state_data.get("last_time_awareness_note", "")
-
                 # Load user memory history
                 if self.user_memory:
                     user_history = state_data.get("user_memory_history", [])
@@ -177,9 +150,9 @@ class RPLogic:
                 else: self.logger.error("Cannot load user memory history: user_memory object missing.")
 
                 # --- Cargar Estado del CICLO de Sueño/Vigilia (Controlado por Logic) ---
-                self.hours_awake = _safe_float_value(state_data.get("hours_awake", 0.0), 0.0, "hours_awake")
+                self.hours_awake = float(state_data.get("hours_awake", 0.0))
                 self.is_sleeping = bool(state_data.get("is_sleeping", False))
-                self.hours_slept = _safe_float_value(state_data.get("hours_slept", 0.0), 0.0, "hours_slept")
+                self.hours_slept = float(state_data.get("hours_slept", 0.0))
                 self.logger.info("Loaded sleep cycle state - Sleeping: %s, Awake: %.1f hrs, Slept: %.1f hrs",
                                  self.is_sleeping, self.hours_awake, self.hours_slept)
                 # --- Fin Carga Ciclo ---
@@ -192,7 +165,7 @@ class RPLogic:
                         # Carga fatiga y tiempo de sueño (si EC aún lo usa internamente)
                         try:
                              # Carga fatiga directamente al atributo de EC
-                             self.emotional_core.fatigue_level = _safe_float_value(emo_state.get("fatigue_level", getattr(self.emotional_core, 'fatigue_level', 0.0)), getattr(self.emotional_core, 'fatigue_level', 0.0), "fatigue_level")
+                             self.emotional_core.fatigue_level = float(emo_state.get("fatigue_level", getattr(self.emotional_core, 'fatigue_level', 0.0)))
                              self.logger.info("Loaded fatigue level into EC: %.1f", self.emotional_core.fatigue_level)
                         except (AttributeError, ValueError, KeyError) as fatigue_err: self.logger.warning("Could not load/convert 'fatigue_level' for EC: %s", fatigue_err)
 
@@ -200,8 +173,8 @@ class RPLogic:
                         try:
                             default_trust = getattr(self.emotional_core, 'current_trust', 0.5)
                             default_intimacy = getattr(self.emotional_core, 'current_intimacy', 0.1)
-                            self.emotional_core.current_trust = _safe_float_value(emo_state.get("current_trust", default_trust), default_trust, "current_trust")
-                            self.emotional_core.current_intimacy = _safe_float_value(emo_state.get("current_intimacy", default_intimacy), default_intimacy, "current_intimacy")
+                            self.emotional_core.current_trust = float(emo_state.get("current_trust", default_trust))
+                            self.emotional_core.current_intimacy = float(emo_state.get("current_intimacy", default_intimacy))
                         except (AttributeError, ValueError) as rel_err: self.logger.warning("Could not load/convert 'current_trust' or 'current_intimacy': %s", rel_err)
 
                         loaded_emotions = emo_state.get("internal_emotions_detailed")
@@ -280,8 +253,6 @@ class RPLogic:
                 "is_sleeping": self.is_sleeping,
                 "hours_slept": self.hours_slept,
                 # --- Fin Guardado Ciclo ---
-                "location_entered_roleplay_time": self.location_entered_roleplay_time.isoformat() if self.location_entered_roleplay_time else None,
-                "last_time_awareness_note": self.last_time_awareness_note,
             }
             self.logger.debug("General state data prepared for saving.")
 
@@ -370,37 +341,6 @@ class RPLogic:
         else: self.logger.debug("Topic focus remains: '%s'", self.current_topic_focus)
 
 
-
-    def _build_time_awareness_note(self):
-        """Build a natural language time note for prompt conditioning."""
-        current_hour = self.current_roleplay_time.hour
-        if 0 <= current_hour < 5:
-            day_phase = "late night"
-        elif 5 <= current_hour < 12:
-            day_phase = "morning"
-        elif 12 <= current_hour < 18:
-            day_phase = "afternoon"
-        elif 18 <= current_hour < 22:
-            day_phase = "evening"
-        else:
-            day_phase = "night"
-
-        minutes_in_location = 0
-        if self.location_entered_roleplay_time:
-            minutes_in_location = max(0, int((self.current_roleplay_time - self.location_entered_roleplay_time).total_seconds() // 60))
-
-        notes = [f"It is currently {day_phase}."]
-        if minutes_in_location >= 30:
-            notes.append(f"You have been at this location for about {minutes_in_location} minutes.")
-        if self.is_sleeping:
-            notes.append("You are currently sleeping and not fully responsive.")
-        elif current_hour >= 23 or current_hour < 6:
-            notes.append("The hour is late; you may feel slower, more tired, or eager to wrap things up.")
-
-        note = " ".join(notes)
-        self.last_time_awareness_note = note
-        return note, day_phase, minutes_in_location
-
     def construct_context(self, user_input):
         """Constructs the context dictionary, including RAG memories and fatigue/sleep state from EC."""
         self.logger.debug("--- Logic: construct_context called ---")
@@ -418,8 +358,6 @@ class RPLogic:
         current_time_str = self.current_roleplay_time.strftime("%A, %I:%M %p")
         current_location = dyn_state.get('location', 'Unknown')
         self.logger.debug("Dynamic state fetched: %s", dyn_state)
-
-        time_awareness_note, day_phase, minutes_in_location = self._build_time_awareness_note()
 
         # --- RAG Retrieval ---
         retrieved_memories_text = []
@@ -492,10 +430,6 @@ class RPLogic:
             "action": dyn_state.get('action', 'Unknown'),
             "topic_focus": self.current_topic_focus,
             "current_time_in_roleplay": current_time_str,
-            "day_phase": day_phase,
-            "minutes_in_location": minutes_in_location,
-            "time_awareness_note": time_awareness_note,
-            "high_impact_event": context_flags["high_impact_event"],
             "emotional_guidance": emotional_guidance,
             "previous_action": previous_narrative_action,
             "dynamic_memory": dyn_state.get('recent_memories', '').split(" | ") if dyn_state.get('recent_memories') else [],
@@ -638,7 +572,6 @@ class RPLogic:
                 if current_loc_before_move != self.pending_location_target:
                     self.logger.info(f"AI ACTION indicates movement. Resolving pending location change: Moving from '{current_loc_before_move}' to '{self.pending_location_target}'")
                     self.dynamic_memory.update_location(self.pending_location_target, self.active_memory)
-                    self.location_entered_roleplay_time = self.current_roleplay_time
                     # Resetear acción/tema si el cambio es significativo (e.g., leaving school)
                     if current_loc_before_move in ["School", "Library", "Science Class"] and self.dynamic_memory.location not in ["School", "Library", "Science Class"]:
                          self.dynamic_memory.update_action("Settling in new location", self.active_memory)
