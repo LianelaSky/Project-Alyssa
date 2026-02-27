@@ -26,6 +26,7 @@ class AppConfig:
 
 
 DEFAULT_MODEL_NAME = "qwen3:8b"
+DEFAULT_MODEL_NAME = "mistral-small3.1:24b"
 DEFAULT_OLLAMA_BASE_URL = "http://localhost:11434"
 DEFAULT_USER_NAME = "Lin"
 
@@ -86,22 +87,6 @@ def configure_logging() -> None:
 main_script_logger = logging.getLogger("rp_response")
 
 
-def _fetch_available_ollama_models(base_url: str):
-    """Return set of model names exposed by Ollama /api/tags."""
-    tags_url = f"{base_url.rstrip('/')}/api/tags"
-    response = requests.get(tags_url, timeout=10)
-    response.raise_for_status()
-    payload = response.json()
-    models = payload.get("models", []) if isinstance(payload, dict) else []
-    names = set()
-    for m in models:
-        if isinstance(m, dict):
-            name = m.get("name")
-            if isinstance(name, str) and name.strip():
-                names.add(name.strip())
-    return names
-
-
 def main(config: AppConfig):
     main_script_logger.info("--- Starting main function (Local Ollama Mode) ---")
     main_script_logger.info("--- Using Model: %s ---", config.model_name)
@@ -126,18 +111,6 @@ def main(config: AppConfig):
             ping_response = requests.get(config.ollama_base_url, timeout=5)
             ping_response.raise_for_status()
             main_script_logger.info("Ollama server responded at %s.", config.ollama_base_url)
-
-            available_models = _fetch_available_ollama_models(config.ollama_base_url)
-            if config.model_name not in available_models:
-                models_preview = ", ".join(sorted(available_models)[:8]) if available_models else "(none found)"
-                msg = (
-                    f"Configured model '{config.model_name}' is not available in Ollama. "
-                    f"Found: {models_preview}. Run `ollama pull {config.model_name}` "
-                    f"or start with `--model <installed-model>`."
-                )
-                main_script_logger.error(msg)
-                print(f"ERROR: {msg}")
-                sys.exit(1)
 
             dialogue_generator = RPDialogueGenerator(
                 model_name=config.model_name,

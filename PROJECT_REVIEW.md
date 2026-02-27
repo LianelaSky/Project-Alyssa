@@ -23,13 +23,6 @@ It runs in a terminal, calls a local Ollama model for responses, and keeps conti
    python rp_response.py
    ```
 
-If you get a model-not-found error, list installed models and either pull the configured one or pass `--model`:
-```bash
-ollama list
-ollama pull qwen3:8b
-python rp_response.py --model <installed-model>
-```
-
 ## Runtime configuration (new)
 You can now avoid hardcoded runtime values and pass configuration via CLI/env:
 
@@ -64,7 +57,7 @@ ALYSSA_OLLAMA_BASE_URL=http://127.0.0.1:11434 python rp_response.py
 
 ## Validation notes
 - `python -m py_compile *.py` passes.
-- Runtime execution depends on having dependencies installed and a reachable local Ollama instance.
+- Runtime execution in this environment is still blocked by unavailable package index access for dependency install.
 
 ## Memory/thinking upgrades (new)
 - Dynamic memory window increased from 3 to 8 events for better short-scene continuity.
@@ -73,4 +66,3 @@ ALYSSA_OLLAMA_BASE_URL=http://127.0.0.1:11434 python rp_response.py
   - recent long-term summaries,
   - a lightweight internal objective derived from topic/crisis/scene state.
 - Dialogue prompt now injects those long-term summaries and objective so responses stay more coherent and proactive.
-- Time-awareness metadata is now included in context (`day_phase`, `minutes_in_location`, and a natural-language `time_awareness_note`) to support realistic dialogue touches like “we have been here a while” or late-night fatigue cues.
