@@ -483,6 +483,7 @@ class RPLogic:
             "day_phase": day_phase,
             "minutes_in_location": minutes_in_location,
             "time_awareness_note": time_awareness_note,
+            "high_impact_event": context_flags["high_impact_event"],
             "emotional_guidance": emotional_guidance,
             "previous_action": previous_narrative_action,
             "dynamic_memory": dyn_state.get('recent_memories', '').split(" | ") if dyn_state.get('recent_memories') else [],

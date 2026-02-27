@@ -57,7 +57,7 @@ ALYSSA_OLLAMA_BASE_URL=http://127.0.0.1:11434 python rp_response.py
 
 ## Validation notes
 - `python -m py_compile *.py` passes.
-- Runtime execution in this environment is still blocked by unavailable package index access for dependency install.
+- Runtime execution depends on having dependencies installed and a reachable local Ollama instance.
 
 ## Memory/thinking upgrades (new)
 - Dynamic memory window increased from 3 to 8 events for better short-scene continuity.

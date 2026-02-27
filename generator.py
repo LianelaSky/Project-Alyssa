@@ -171,7 +171,7 @@ class RPDialogueGenerator:
          tone = emotional_guidance.get('tone', 'neutral').lower()
          active_defenses = emotional_guidance.get('active_defenses', [])
          relationship = emotional_guidance.get('relationship', 'neutral').lower()
-         is_high_impact = context.get('emotional_guidance', {}).get('high_impact_event', False)
+         is_high_impact = context.get('high_impact_event', context.get('emotional_guidance', {}).get('high_impact_event', False))
 
          # --- Obtener Estado de Fatiga/Sueño y Constantes (desde contexto) ---
          is_sleeping = context.get("is_sleeping", False)
