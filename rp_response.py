@@ -25,6 +25,7 @@ class AppConfig:
     seed_initial_context: bool
 
 
+DEFAULT_MODEL_NAME = "qwen3:8b"
 DEFAULT_MODEL_NAME = "mistral-small3.1:24b"
 DEFAULT_OLLAMA_BASE_URL = "http://localhost:11434"
 DEFAULT_USER_NAME = "Lin"
