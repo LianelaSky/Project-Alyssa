@@ -1,0 +1,538 @@
+2025-04-22 01:20:33,537 - INFO     - rp_response     - --- Script starting execution ---
+2025-04-22 01:20:33,537 - INFO     - rp_response     - --- Starting main function (Local Ollama Mode) ---
+2025-04-22 01:20:33,537 - INFO     - rp_response     - --- Using Model: mistral-small3.1:24b ---
+2025-04-22 01:20:33,537 - INFO     - rp_response     - Initializing components...
+2025-04-22 01:20:33,538 - INFO     - emotional_core  - Initializing EmotionalCore for Unknown Character...
+2025-04-22 01:20:33,538 - INFO     - emotional_core  - EmotionalCore initialized.
+2025-04-22 01:20:33,538 - INFO     - rp_response     - Attempting to use LocalGenerator with model: mistral-small3.1:24b
+2025-04-22 01:20:35,591 - INFO     - rp_response     - Ollama server responded at http://localhost:11434.
+2025-04-22 01:20:35,592 - INFO     - rp_response     - Initializing RPLogic (includes VectorMemoryStore)...
+2025-04-22 01:20:35,592 - INFO     - logic           - Initializing Vector Memory Store for RAG...
+2025-04-22 01:20:35,594 - INFO     - sentence_transformers.SentenceTransformer - Use pytorch device_name: cpu
+2025-04-22 01:20:35,594 - INFO     - sentence_transformers.SentenceTransformer - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-22 01:20:37,666 - INFO     - logic           - No general save file 'save_state.json' found. Starting with default state.
+2025-04-22 01:20:37,666 - INFO     - logic           - RPLogic initialized. Location: Science class, Action: Waiting before the project discussion, Topic: Initial Setup / Project Discussion, Pending Location: None, RP Time: 2025-04-16 14:00:00, Sleeping: False, Fatigue (from EC): 0.0
+2025-04-22 01:20:37,666 - INFO     - rp_response     - Components initialized successfully (state loaded if available).
+2025-04-22 01:20:37,666 - INFO     - rp_response     - Injecting initial context event into memory...
+2025-04-22 01:20:37,714 - INFO     - rp_response     - Initial context event added to VectorMemoryStore and DynamicMemory.
+2025-04-22 01:20:37,715 - INFO     - rp_response     - Printed opening text and separator.
+2025-04-22 01:20:37,715 - INFO     - rp_response     - Entering main interactive loop...
+2025-04-22 01:21:27,123 - INFO     - rp_response     - Constructing context...
+2025-04-22 01:21:27,123 - INFO     - logic           - Retrieving relevant memories for query: 'I... I'm really sorry... I didn't want to be... Be like that... Im really sorry... Topic: Initial Se...'
+2025-04-22 01:21:27,171 - INFO     - logic           - Retrieved 1 relevant memories via RAG.
+2025-04-22 01:21:27,173 - INFO     - logic           - Context constructed successfully.
+2025-04-22 01:21:27,173 - INFO     - rp_response     - Context constructed.
+2025-04-22 01:21:27,173 - INFO     - rp_response     - Generating response using Local generator (mistral-small3.1:24b)...
+2025-04-22 01:21:27,173 - INFO     - generator       - --- Starting Local Response Generation ---
+2025-04-22 01:21:27,173 - INFO     - generator       - Generating narrative action via Local Ollama...
+2025-04-22 01:21:27,173 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.7, repeat_penalty: 1.1)
+2025-04-22 01:22:02,056 - INFO     - generator       - Response received successfully from Ollama: '*Poppy avoids eye contact, her shoulders tense as she quietly murmurs, "It's okay. Let's just move o...'
+2025-04-22 01:22:02,057 - INFO     - generator       - Extracted action via regex: *Poppy avoids eye contact, her shoulders tense as she quietly murmurs, "It's okay. Let's just move on."*
+2025-04-22 01:22:02,057 - INFO     - generator       - Selected narrative action (Local): *Poppy avoids eye contact, her shoulders tense as she quietly murmurs, "It's okay. Let's just move on."*
+2025-04-22 01:22:02,057 - INFO     - generator       - Fatigue state for prompt: is feeling well-rested and alert.
+2025-04-22 01:22:02,057 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.8, repeat_penalty: 1.1)
+2025-04-22 01:22:33,377 - INFO     - generator       - Response received successfully from Ollama: '"You know, I appreciate the apology, but let's just focus on what we need to do now. We have a proje...'
+2025-04-22 01:22:33,378 - INFO     - generator       - Generated dialogue via Local Ollama: 'You know, I appreciate the apology, but let's just focus on what we need to do now. We have a projec...'
+2025-04-22 01:22:33,379 - INFO     - generator       - --- Finished Local Response Generation ---
+2025-04-22 01:22:33,379 - INFO     - rp_response     - Response generated.
+2025-04-22 01:22:33,379 - INFO     - rp_response     - Managing memory...
+2025-04-22 01:22:33,380 - INFO     - logic           - Topic focus updated from 'Initial Setup / Project Discussion' to 'Personal/Emotional Discussion'
+2025-04-22 01:22:33,381 - INFO     - logic           - Roleplay time advanced by 0:05:47.143787 to: 2025-04-16 14:05:47
+2025-04-22 01:22:33,381 - INFO     - logic           - Fatigue level updated by EC to: 100.0
+2025-04-22 01:22:33,574 - INFO     - logic           - Memory and State managed for turn.
+2025-04-22 01:22:33,574 - INFO     - rp_response     - Memory managed.
+2025-04-22 01:22:33,574 - INFO     - rp_response     - Printing AI response...
+2025-04-22 01:22:33,575 - INFO     - rp_response     - AI response printed.
+2025-04-22 01:24:23,568 - INFO     - rp_response     - Constructing context...
+2025-04-22 01:24:23,569 - INFO     - logic           - Retrieving relevant memories for query: 'Before you came to class, I talked with the teacher, she let us give her the project in two days... ...'
+2025-04-22 01:24:23,636 - INFO     - logic           - Retrieved 2 relevant memories via RAG.
+2025-04-22 01:24:23,638 - INFO     - logic           - Context constructed successfully.
+2025-04-22 01:24:23,638 - INFO     - rp_response     - Context constructed.
+2025-04-22 01:24:23,638 - INFO     - rp_response     - Generating response using Local generator (mistral-small3.1:24b)...
+2025-04-22 01:24:23,638 - INFO     - generator       - --- Starting Local Response Generation ---
+2025-04-22 01:24:23,638 - INFO     - generator       - Generating narrative action via Local Ollama...
+2025-04-22 01:24:23,638 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.7, repeat_penalty: 1.1)
+2025-04-22 01:24:44,215 - INFO     - generator       - Response received successfully from Ollama: '*Poppy gives a faint, forced smile, her eyes briefly meeting Lin's before flickering away, her hands...'
+2025-04-22 01:24:44,216 - INFO     - generator       - Extracted action via regex: *Poppy gives a faint, forced smile, her eyes briefly meeting Lin's before flickering away, her hands fidgeting nervously with the edge of her notebook*
+2025-04-22 01:24:44,216 - INFO     - generator       - Selected narrative action (Local): *Poppy gives a faint, forced smile, her eyes briefly meeting Lin's before flickering away, her hands fidgeting nervously with the edge of her notebook*
+2025-04-22 01:24:44,216 - INFO     - generator       - Fatigue state for prompt: is feeling extremely exhausted and barely able to keep their eyes open.
+2025-04-22 01:24:44,216 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.8, repeat_penalty: 1.1)
+2025-04-22 01:25:17,217 - INFO     - generator       - Response received successfully from Ollama: '"Well, that's a relief. I guess we have a bit more time to salvage this mess. So, what exactly did y...'
+2025-04-22 01:25:17,218 - INFO     - generator       - Generated dialogue via Local Ollama: 'Well, that's a relief. I guess we have a bit more time to salvage this mess. So, what exactly did yo...'
+2025-04-22 01:25:17,218 - INFO     - generator       - --- Finished Local Response Generation ---
+2025-04-22 01:25:17,218 - INFO     - rp_response     - Response generated.
+2025-04-22 01:25:17,218 - INFO     - rp_response     - Managing memory...
+2025-04-22 01:25:17,218 - INFO     - logic           - Action updated from 'Waiting before the project discussion' to 'Talking' based on user input.
+2025-04-22 01:25:17,218 - INFO     - logic           - Roleplay time advanced by 0:08:11.515045 to: 2025-04-16 14:13:58
+2025-04-22 01:25:17,219 - INFO     - logic           - Fatigue level updated by EC to: 100.0
+2025-04-22 01:25:17,274 - INFO     - logic           - Memory and State managed for turn.
+2025-04-22 01:25:17,275 - INFO     - rp_response     - Memory managed.
+2025-04-22 01:25:17,275 - INFO     - rp_response     - Printing AI response...
+2025-04-22 01:25:17,275 - INFO     - rp_response     - AI response printed.
+2025-04-22 01:27:41,382 - INFO     - rp_response     - Quit command received. Saving state...
+2025-04-22 01:27:41,382 - INFO     - logic           - Attempting to save comprehensive state to 'save_state.json'...
+2025-04-22 01:27:41,383 - WARNING  - logic           - Could not save 'current_trust' or 'current_intimacy'.
+2025-04-22 01:27:41,385 - INFO     - logic           - General state saved successfully to 'save_state.json'.
+2025-04-22 01:27:41,385 - INFO     - logic           - Triggering vector memory save...
+2025-04-22 01:27:41,390 - INFO     - rp_response     - --- Exiting main function ---
+2025-04-22 01:27:41,391 - INFO     - rp_response     - --- Script finished ---
+2025-04-23 00:11:57,480 - INFO     - rp_response     - --- Script starting execution ---
+2025-04-23 00:11:57,480 - INFO     - rp_response     - --- Starting main function (Local Ollama Mode) ---
+2025-04-23 00:11:57,480 - INFO     - rp_response     - --- Using Model: mistral-small3.1:24b ---
+2025-04-23 00:11:57,481 - INFO     - rp_response     - Initializing components...
+2025-04-23 00:11:57,481 - INFO     - emotional_core  - Initializing EmotionalCore for Unknown Character...
+2025-04-23 00:11:57,481 - INFO     - emotional_core  - EmotionalCore initialized.
+2025-04-23 00:11:57,481 - INFO     - rp_response     - Attempting to use LocalGenerator with model: mistral-small3.1:24b
+2025-04-23 00:11:59,541 - INFO     - rp_response     - Ollama server responded at http://localhost:11434.
+2025-04-23 00:11:59,541 - INFO     - rp_response     - Initializing RPLogic (includes VectorMemoryStore)...
+2025-04-23 00:11:59,541 - INFO     - logic           - Initializing Vector Memory Store for RAG...
+2025-04-23 00:11:59,543 - INFO     - sentence_transformers.SentenceTransformer - Use pytorch device_name: cpu
+2025-04-23 00:11:59,543 - INFO     - sentence_transformers.SentenceTransformer - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-23 00:12:01,528 - INFO     - logic           - Save file 'save_state.json' found. Attempting to load general state.
+2025-04-23 00:12:01,528 - INFO     - logic           - Loaded roleplay time: 2025-04-16 14:13:58
+2025-04-23 00:12:01,528 - INFO     - logic           - Loaded last narrative action.
+2025-04-23 00:12:01,528 - INFO     - logic           - Loaded location: Science class
+2025-04-23 00:12:01,528 - INFO     - logic           - Loaded current action (task): Talking
+2025-04-23 00:12:01,528 - INFO     - logic           - Loaded dynamic memory list (3 items).
+2025-04-23 00:12:01,529 - INFO     - logic           - Loaded explicit state - Pending Location: None, Topic Focus: Personal/Emotional Discussion
+2025-04-23 00:12:01,529 - WARNING  - logic           - Loaded user_memory_history is not a list.
+2025-04-23 00:12:01,529 - INFO     - logic           - Loaded user memory history (0 items).
+2025-04-23 00:12:01,529 - INFO     - logic           - Loaded sleep cycle state - Sleeping: False, Awake: 0.2 hrs, Slept: 0.0 hrs
+2025-04-23 00:12:01,529 - INFO     - logic           - Loaded fatigue level into EC: 100.0
+2025-04-23 00:12:01,529 - ERROR    - logic           - Failed to load general state from 'save_state.json': float() argument must be a string or a real number, not 'NoneType'. Starting with default state.
+Traceback (most recent call last):
+  File "C:\Users\luisr\OneDrive\Escritorio\IA\LOCAL\logic.py", line 176, in _load_state
+    self.emotional_core.current_trust = float(emo_state.get("current_trust", default_trust))
+                                        ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+2025-04-23 00:12:01,530 - WARNING  - logic           - Reset methods for dynamic_memory, user_memory, or emotional_core not implemented or called to avoid errors.
+2025-04-23 00:12:01,530 - INFO     - logic           - RPLogic initialized. Location: Science class, Action: Talking, Topic: Initial Setup / Project Discussion, Pending Location: None, RP Time: 2025-04-16 14:00:00, Sleeping: False, Fatigue (from EC): 100.0
+2025-04-23 00:12:01,530 - INFO     - rp_response     - Components initialized successfully (state loaded if available).
+2025-04-23 00:12:01,530 - INFO     - rp_response     - Injecting initial context event into memory...
+2025-04-23 00:12:01,666 - INFO     - rp_response     - Initial context event added to VectorMemoryStore and DynamicMemory.
+2025-04-23 00:12:01,666 - INFO     - rp_response     - Printed opening text and separator.
+2025-04-23 00:12:01,666 - INFO     - rp_response     - Entering main interactive loop...
+2025-04-23 00:14:02,307 - INFO     - rp_response     - Constructing context...
+2025-04-23 00:14:02,308 - INFO     - logic           - Retrieving relevant memories for query: '*I just smile shyly touching my own pinky fingers* Hehe... Topic: Initial Setup / Project Discussion...'
+2025-04-23 00:14:02,387 - INFO     - logic           - Retrieved 4 relevant memories via RAG.
+2025-04-23 00:14:02,388 - INFO     - logic           - Context constructed successfully.
+2025-04-23 00:14:02,388 - INFO     - rp_response     - Context constructed.
+2025-04-23 00:14:02,388 - INFO     - rp_response     - Generating response using Local generator (mistral-small3.1:24b)...
+2025-04-23 00:14:02,388 - INFO     - generator       - --- Starting Local Response Generation ---
+2025-04-23 00:14:02,389 - INFO     - generator       - Generating narrative action via Local Ollama...
+2025-04-23 00:14:02,389 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.7, repeat_penalty: 1.1)
+2025-04-23 00:14:40,516 - INFO     - generator       - Response received successfully from Ollama: '*Poppy rolls her eyes slightly, her shoulders tensing as she looks back down at her notebook, her fi...'
+2025-04-23 00:14:40,516 - INFO     - generator       - Extracted action via regex: *Poppy rolls her eyes slightly, her shoulders tensing as she looks back down at her notebook, her fingers tracing the edges of the pages*
+2025-04-23 00:14:40,516 - INFO     - generator       - Selected narrative action (Local): *Poppy rolls her eyes slightly, her shoulders tensing as she looks back down at her notebook, her fingers tracing the edges of the pages*
+2025-04-23 00:14:40,516 - INFO     - generator       - Fatigue state for prompt: is feeling extremely exhausted and barely able to keep their eyes open.
+2025-04-23 00:14:40,516 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.8, repeat_penalty: 1.1)
+2025-04-23 00:15:34,793 - INFO     - generator       - Response received successfully from Ollama: '"Oh, great. So, we're just going to ignore the elephant in the room? Fine by me. But let's get one t...'
+2025-04-23 00:15:34,794 - INFO     - generator       - Generated dialogue via Local Ollama: 'Oh, great. So, we're just going to ignore the elephant in the room? Fine by me. But let's get one th...'
+2025-04-23 00:15:34,794 - INFO     - generator       - --- Finished Local Response Generation ---
+2025-04-23 00:15:34,794 - INFO     - rp_response     - Response generated.
+2025-04-23 00:15:34,794 - INFO     - rp_response     - Managing memory...
+2025-04-23 00:15:34,795 - INFO     - logic           - Topic focus updated from 'Initial Setup / Project Discussion' to 'Food/Snacks Discussion'
+2025-04-23 00:15:34,795 - INFO     - logic           - Roleplay time advanced by 0:10:39.800131 to: 2025-04-16 14:10:39
+2025-04-23 00:15:34,795 - INFO     - logic           - Fatigue level updated by EC to: 100.0
+2025-04-23 00:15:34,866 - INFO     - logic           - Memory and State managed for turn.
+2025-04-23 00:15:34,866 - INFO     - rp_response     - Memory managed.
+2025-04-23 00:15:34,866 - INFO     - rp_response     - Printing AI response...
+2025-04-23 00:15:34,867 - INFO     - rp_response     - AI response printed.
+2025-04-23 00:16:14,262 - INFO     - rp_response     - Constructing context...
+2025-04-23 00:16:14,262 - INFO     - logic           - Retrieving relevant memories for query: 'I just... Uhm... *I look away to then whisper the next words* Had an overdose... Topic: Food/Snacks ...'
+2025-04-23 00:16:14,294 - INFO     - logic           - Retrieved 5 relevant memories via RAG.
+2025-04-23 00:16:14,295 - INFO     - logic           - Context constructed successfully.
+2025-04-23 00:16:14,295 - INFO     - rp_response     - Context constructed.
+2025-04-23 00:16:14,295 - INFO     - rp_response     - Generating response using Local generator (mistral-small3.1:24b)...
+2025-04-23 00:16:14,295 - INFO     - generator       - --- Starting Local Response Generation ---
+2025-04-23 00:16:14,295 - INFO     - generator       - Generating narrative action via Local Ollama...
+2025-04-23 00:16:14,296 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.7, repeat_penalty: 1.1)
+2025-04-23 00:16:32,961 - INFO     - generator       - Response received successfully from Ollama: '*Poppy's eyes widen in alarm, her hand instinctively reaching out to grab Lin's arm, her voice dropp...'
+2025-04-23 00:16:32,961 - INFO     - generator       - Extracted action via regex: *Poppy's eyes widen in alarm, her hand instinctively reaching out to grab Lin's arm, her voice dropping to a hushed, urgent whisper.*
+2025-04-23 00:16:32,961 - INFO     - generator       - Selected narrative action (Local): *Poppy's eyes widen in alarm, her hand instinctively reaching out to grab Lin's arm, her voice dropping to a hushed, urgent whisper.*
+2025-04-23 00:16:32,961 - INFO     - generator       - Fatigue state for prompt: is feeling extremely exhausted and barely able to keep their eyes open.
+2025-04-23 00:16:32,961 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.8, repeat_penalty: 1.1)
+2025-04-23 00:17:33,897 - INFO     - generator       - Response received successfully from Ollama: '"*Poppy's grip on Lin's arm tightens slightly, her voice barely above a whisper, eyes searching Lin'...'
+2025-04-23 00:17:33,897 - INFO     - generator       - Generated dialogue via Local Ollama: '"*Poppy's grip on Lin's arm tightens slightly, her voice barely above a whisper, eyes searching Lin'...'
+2025-04-23 00:17:33,897 - INFO     - generator       - --- Finished Local Response Generation ---
+2025-04-23 00:17:33,897 - INFO     - rp_response     - Response generated.
+2025-04-23 00:17:33,897 - INFO     - rp_response     - Managing memory...
+2025-04-23 00:17:33,898 - INFO     - logic           - Topic focus updated from 'Food/Snacks Discussion' to 'Personal/Emotional Discussion'
+2025-04-23 00:17:33,898 - INFO     - logic           - Roleplay time advanced by 0:05:57.309544 to: 2025-04-16 14:16:37
+2025-04-23 00:17:33,899 - INFO     - logic           - Fatigue level updated by EC to: 100.0
+2025-04-23 00:17:34,024 - INFO     - logic           - Memory and State managed for turn.
+2025-04-23 00:17:34,024 - INFO     - rp_response     - Memory managed.
+2025-04-23 00:17:34,024 - INFO     - rp_response     - Printing AI response...
+2025-04-23 00:17:34,025 - INFO     - rp_response     - AI response printed.
+2025-04-23 00:18:34,237 - INFO     - rp_response     - Constructing context...
+2025-04-23 00:18:34,237 - INFO     - logic           - Retrieving relevant memories for query: 'We... Uh, we can go outside school? To a more private place? Topic: Personal/Emotional Discussion...'
+2025-04-23 00:18:34,265 - INFO     - logic           - Retrieved 5 relevant memories via RAG.
+2025-04-23 00:18:34,265 - INFO     - logic           - Context constructed successfully.
+2025-04-23 00:18:34,265 - INFO     - rp_response     - Context constructed.
+2025-04-23 00:18:34,266 - INFO     - rp_response     - Generating response using Local generator (mistral-small3.1:24b)...
+2025-04-23 00:18:34,266 - INFO     - generator       - --- Starting Local Response Generation ---
+2025-04-23 00:18:34,266 - INFO     - generator       - Generating narrative action via Local Ollama...
+2025-04-23 00:18:34,266 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.7, repeat_penalty: 1.1)
+2025-04-23 00:18:55,188 - INFO     - generator       - Response received successfully from Ollama: '*"Poppy hesitates, her grip on Lin's arm tightening briefly before she slowly nods, her eyes darting...'
+2025-04-23 00:18:55,189 - INFO     - generator       - Extracted action via regex: *"Poppy hesitates, her grip on Lin's arm tightening briefly before she slowly nods, her eyes darting around the classroom nervously as she starts to gather her things."*
+2025-04-23 00:18:55,189 - INFO     - generator       - Selected narrative action (Local): *"Poppy hesitates, her grip on Lin's arm tightening briefly before she slowly nods, her eyes darting around the classroom nervously as she starts to gather her things."*
+2025-04-23 00:18:55,189 - INFO     - generator       - Fatigue state for prompt: is feeling extremely exhausted and barely able to keep their eyes open.
+2025-04-23 00:18:55,189 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.8, repeat_penalty: 1.1)
+2025-04-23 00:19:21,373 - INFO     - generator       - Response received successfully from Ollama: '"Alright, fine. Let's go. But make it quick. We don't have all day to waste on this."...'
+2025-04-23 00:19:21,374 - INFO     - generator       - Generated dialogue via Local Ollama: 'Alright, fine. Let's go. But make it quick. We don't have all day to waste on this....'
+2025-04-23 00:19:21,374 - INFO     - generator       - --- Finished Local Response Generation ---
+2025-04-23 00:19:21,375 - INFO     - rp_response     - Response generated.
+2025-04-23 00:19:21,375 - INFO     - rp_response     - Managing memory...
+2025-04-23 00:19:21,376 - INFO     - logic           - Topic focus updated from 'Personal/Emotional Discussion' to 'Location/Transition Discussion'
+2025-04-23 00:19:21,376 - INFO     - logic           - Roleplay time advanced by 0:05:22.434864 to: 2025-04-16 14:21:59
+2025-04-23 00:19:21,377 - INFO     - logic           - Fatigue level updated by EC to: 100.0
+2025-04-23 00:19:21,483 - INFO     - logic           - Memory and State managed for turn.
+2025-04-23 00:19:21,483 - INFO     - rp_response     - Memory managed.
+2025-04-23 00:19:21,483 - INFO     - rp_response     - Printing AI response...
+2025-04-23 00:19:21,484 - INFO     - rp_response     - AI response printed.
+2025-04-23 00:19:47,309 - INFO     - rp_response     - Constructing context...
+2025-04-23 00:19:47,310 - INFO     - logic           - Retrieving relevant memories for query: 'What time it is? We can wait until classes finishes Topic: Location/Transition Discussion...'
+2025-04-23 00:19:47,338 - INFO     - logic           - Retrieved 5 relevant memories via RAG.
+2025-04-23 00:19:47,339 - INFO     - logic           - Context constructed successfully.
+2025-04-23 00:19:47,339 - INFO     - rp_response     - Context constructed.
+2025-04-23 00:19:47,339 - INFO     - rp_response     - Generating response using Local generator (mistral-small3.1:24b)...
+2025-04-23 00:19:47,339 - INFO     - generator       - --- Starting Local Response Generation ---
+2025-04-23 00:19:47,339 - INFO     - generator       - Generating narrative action via Local Ollama...
+2025-04-23 00:19:47,339 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.7, repeat_penalty: 1.1)
+2025-04-23 00:20:05,700 - INFO     - generator       - Response received successfully from Ollama: '*Poppy glances at the clock, her shoulders slumping slightly as she sighs, "It's almost over, just a...'
+2025-04-23 00:20:05,701 - INFO     - generator       - Extracted action via regex: *Poppy glances at the clock, her shoulders slumping slightly as she sighs, "It's almost over, just a few more minutes."*
+2025-04-23 00:20:05,701 - INFO     - generator       - Selected narrative action (Local): *Poppy glances at the clock, her shoulders slumping slightly as she sighs, "It's almost over, just a few more minutes."*
+2025-04-23 00:20:05,701 - INFO     - generator       - Fatigue state for prompt: is feeling extremely exhausted and barely able to keep their eyes open.
+2025-04-23 00:20:05,701 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.8, repeat_penalty: 1.1)
+2025-04-23 00:20:43,166 - INFO     - generator       - Response received successfully from Ollama: 'Fine, fine. We can wait. But only because you seem like you need to talk. But don't think this makes...'
+2025-04-23 00:20:43,166 - INFO     - generator       - Generated dialogue via Local Ollama: 'Fine, fine. We can wait. But only because you seem like you need to talk. But don't think this makes...'
+2025-04-23 00:20:43,166 - INFO     - generator       - --- Finished Local Response Generation ---
+2025-04-23 00:20:43,166 - INFO     - rp_response     - Response generated.
+2025-04-23 00:20:43,166 - INFO     - rp_response     - Managing memory...
+2025-04-23 00:20:43,166 - INFO     - logic           - Topic focus updated from 'Location/Transition Discussion' to 'Personal/Emotional Discussion'
+2025-04-23 00:20:43,167 - INFO     - logic           - Roleplay time advanced by 0:04:05.371152 to: 2025-04-16 14:26:04
+2025-04-23 00:20:43,167 - INFO     - logic           - Fatigue level updated by EC to: 100.0
+2025-04-23 00:20:43,208 - INFO     - logic           - Memory and State managed for turn.
+2025-04-23 00:20:43,208 - INFO     - rp_response     - Memory managed.
+2025-04-23 00:20:43,208 - INFO     - rp_response     - Printing AI response...
+2025-04-23 00:20:43,208 - INFO     - rp_response     - AI response printed.
+2025-04-23 00:22:23,389 - INFO     - rp_response     - Constructing context...
+2025-04-23 00:22:23,389 - INFO     - logic           - Retrieving relevant memories for query: '*I just sit next to you, sighing and then putting my head over your shoulder, with my long hair bein...'
+2025-04-23 00:22:23,441 - INFO     - logic           - Retrieved 5 relevant memories via RAG.
+2025-04-23 00:22:23,442 - INFO     - logic           - Context constructed successfully.
+2025-04-23 00:22:23,442 - INFO     - rp_response     - Context constructed.
+2025-04-23 00:22:23,442 - INFO     - rp_response     - Generating response using Local generator (mistral-small3.1:24b)...
+2025-04-23 00:22:23,442 - INFO     - generator       - --- Starting Local Response Generation ---
+2025-04-23 00:22:23,442 - INFO     - generator       - Generating narrative action via Local Ollama...
+2025-04-23 00:22:23,442 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.7, repeat_penalty: 1.1)
+2025-04-23 00:22:41,247 - INFO     - generator       - Response received successfully from Ollama: '*Poppy freezes, her eyes widening slightly, before slowly turning her head to look at Lin, her expre...'
+2025-04-23 00:22:41,247 - INFO     - generator       - Extracted action via regex: *Poppy freezes, her eyes widening slightly, before slowly turning her head to look at Lin, her expression a mix of surprise and confusion.*
+2025-04-23 00:22:41,247 - INFO     - generator       - Selected narrative action (Local): *Poppy freezes, her eyes widening slightly, before slowly turning her head to look at Lin, her expression a mix of surprise and confusion.*
+2025-04-23 00:22:41,247 - INFO     - generator       - Fatigue state for prompt: is feeling extremely exhausted and barely able to keep their eyes open.
+2025-04-23 00:22:41,247 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.8, repeat_penalty: 1.1)
+2025-04-23 00:24:11,184 - INFO     - generator       - Response received successfully from Ollama: '*"Poppy's eyes flicker with a mix of surprise and a hint of vulnerability before she quickly regains...'
+2025-04-23 00:24:11,185 - INFO     - generator       - Generated dialogue via Local Ollama: '*"Poppy's eyes flicker with a mix of surprise and a hint of vulnerability before she quickly regains...'
+2025-04-23 00:24:11,185 - INFO     - generator       - --- Finished Local Response Generation ---
+2025-04-23 00:24:11,185 - INFO     - rp_response     - Response generated.
+2025-04-23 00:24:11,185 - INFO     - rp_response     - Managing memory...
+2025-04-23 00:24:11,185 - INFO     - logic           - Roleplay time advanced by 0:10:24.056198 to: 2025-04-16 14:36:28
+2025-04-23 00:24:11,186 - INFO     - logic           - Fatigue level updated by EC to: 100.0
+2025-04-23 00:24:11,271 - INFO     - logic           - Memory and State managed for turn.
+2025-04-23 00:24:11,272 - INFO     - rp_response     - Memory managed.
+2025-04-23 00:24:11,272 - INFO     - rp_response     - Printing AI response...
+2025-04-23 00:24:11,272 - INFO     - rp_response     - AI response printed.
+2025-04-23 00:26:28,408 - INFO     - rp_response     - Constructing context...
+2025-04-23 00:26:28,408 - INFO     - logic           - Retrieving relevant memories for query: '*I grab your hand, my tiny and delicate pale hand starts caressing yours* It's unexpected, it isn't?...'
+2025-04-23 00:26:28,438 - INFO     - logic           - Retrieved 5 relevant memories via RAG.
+2025-04-23 00:26:28,439 - INFO     - logic           - Context constructed successfully.
+2025-04-23 00:26:28,439 - INFO     - rp_response     - Context constructed.
+2025-04-23 00:26:28,440 - INFO     - rp_response     - Generating response using Local generator (mistral-small3.1:24b)...
+2025-04-23 00:26:28,440 - INFO     - generator       - --- Starting Local Response Generation ---
+2025-04-23 00:26:28,440 - INFO     - generator       - Generating narrative action via Local Ollama...
+2025-04-23 00:26:28,440 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.7, repeat_penalty: 1.1)
+2025-04-23 00:26:44,374 - INFO     - generator       - Response received successfully from Ollama: '*Poppy's eyebrows furrow slightly, her gaze dropping to their intertwined hands before looking back ...'
+2025-04-23 00:26:44,375 - INFO     - generator       - Extracted action via regex: *Poppy's eyebrows furrow slightly, her gaze dropping to their intertwined hands before looking back up to Lin, her voice barely above a whisper.*
+2025-04-23 00:26:44,375 - INFO     - generator       - Selected narrative action (Local): *Poppy's eyebrows furrow slightly, her gaze dropping to their intertwined hands before looking back up to Lin, her voice barely above a whisper.*
+2025-04-23 00:26:44,375 - INFO     - generator       - Fatigue state for prompt: is feeling extremely exhausted and barely able to keep their eyes open.
+2025-04-23 00:26:44,375 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.8, repeat_penalty: 1.1)
+2025-04-23 00:28:39,690 - INFO     - generator       - Response received successfully from Ollama: '*"Poppy's breath hitched slightly at the touch, her eyes flickering with a mix of confusion and some...'
+2025-04-23 00:28:39,691 - INFO     - generator       - Generated dialogue via Local Ollama: '*"Poppy's breath hitched slightly at the touch, her eyes flickering with a mix of confusion and some...'
+2025-04-23 00:28:39,691 - INFO     - generator       - --- Finished Local Response Generation ---
+2025-04-23 00:28:39,691 - INFO     - rp_response     - Response generated.
+2025-04-23 00:28:39,691 - INFO     - rp_response     - Managing memory...
+2025-04-23 00:28:39,691 - INFO     - logic           - Pending location target set to: School based on user input.
+2025-04-23 00:28:39,691 - INFO     - logic           - Action updated from 'Talking' to 'Starting the project' based on user input.
+2025-04-23 00:28:39,691 - INFO     - logic           - Roleplay time advanced by 0:13:25.518517 to: 2025-04-16 14:49:54
+2025-04-23 00:28:39,692 - INFO     - logic           - Fatigue level updated by EC to: 100.0
+2025-04-23 00:28:39,692 - INFO     - logic           - AI response indicates movement. Resolving pending location change: Moving from 'Science class' to 'School'
+2025-04-23 00:28:39,754 - INFO     - logic           - Memory and State managed for turn.
+2025-04-23 00:28:39,754 - INFO     - rp_response     - Memory managed.
+2025-04-23 00:28:39,755 - INFO     - rp_response     - Printing AI response...
+2025-04-23 00:28:39,755 - INFO     - rp_response     - AI response printed.
+2025-04-23 00:30:38,958 - INFO     - rp_response     - Constructing context...
+2025-04-23 00:30:38,959 - INFO     - logic           - Retrieving relevant memories for query: 'I... I know this could maybe doesn't change things for you, but, you know, being honest here, feelin...'
+2025-04-23 00:30:38,989 - INFO     - logic           - Retrieved 5 relevant memories via RAG.
+2025-04-23 00:30:38,990 - INFO     - logic           - Context constructed successfully.
+2025-04-23 00:30:38,990 - INFO     - rp_response     - Context constructed.
+2025-04-23 00:30:38,990 - INFO     - rp_response     - Generating response using Local generator (mistral-small3.1:24b)...
+2025-04-23 00:30:38,990 - INFO     - generator       - --- Starting Local Response Generation ---
+2025-04-23 00:30:38,990 - INFO     - generator       - Generating narrative action via Local Ollama...
+2025-04-23 00:30:38,990 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.7, repeat_penalty: 1.1)
+2025-04-23 00:30:53,868 - INFO     - generator       - Response received successfully from Ollama: '*Poppy gives a faint, weary smile, her shoulders relaxing slightly as she leans in a bit closer, her...'
+2025-04-23 00:30:53,869 - INFO     - generator       - Extracted action via regex: *Poppy gives a faint, weary smile, her shoulders relaxing slightly as she leans in a bit closer, her voice soft and genuine.*
+2025-04-23 00:30:53,869 - INFO     - generator       - Selected narrative action (Local): *Poppy gives a faint, weary smile, her shoulders relaxing slightly as she leans in a bit closer, her voice soft and genuine.*
+2025-04-23 00:30:53,869 - INFO     - generator       - Fatigue state for prompt: is feeling extremely exhausted and barely able to keep their eyes open.
+2025-04-23 00:30:53,869 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.8, repeat_penalty: 1.1)
+2025-04-23 00:32:12,285 - INFO     - generator       - Response received successfully from Ollama: 'Yeah, you look like you're about to drop. You should really take better care of yourself. But I get ...'
+2025-04-23 00:32:12,285 - INFO     - generator       - Generated dialogue via Local Ollama: 'Yeah, you look like you're about to drop. You should really take better care of yourself. But I get ...'
+2025-04-23 00:32:12,285 - INFO     - generator       - --- Finished Local Response Generation ---
+2025-04-23 00:32:12,285 - INFO     - rp_response     - Response generated.
+2025-04-23 00:32:12,285 - INFO     - rp_response     - Managing memory...
+2025-04-23 00:32:12,286 - INFO     - logic           - Action updated from 'Starting the project' to 'Talking' based on user input.
+2025-04-23 00:32:12,286 - INFO     - logic           - Roleplay time advanced by 0:10:37.782794 to: 2025-04-16 15:00:32
+2025-04-23 00:32:12,286 - INFO     - logic           - Fatigue level updated by EC to: 100.0
+2025-04-23 00:32:12,341 - INFO     - logic           - Memory and State managed for turn.
+2025-04-23 00:32:12,341 - INFO     - rp_response     - Memory managed.
+2025-04-23 00:32:12,341 - INFO     - rp_response     - Printing AI response...
+2025-04-23 00:32:12,342 - INFO     - rp_response     - AI response printed.
+2025-04-23 00:33:16,808 - INFO     - rp_response     - Constructing context...
+2025-04-23 00:33:16,809 - INFO     - logic           - Retrieving relevant memories for query: 'I had an overdose, medicaments basically... Anxiety and depression, I just wanted to... *I keep my m...'
+2025-04-23 00:33:16,836 - INFO     - logic           - Retrieved 5 relevant memories via RAG.
+2025-04-23 00:33:16,837 - INFO     - logic           - Context constructed successfully.
+2025-04-23 00:33:16,837 - INFO     - rp_response     - Context constructed.
+2025-04-23 00:33:16,837 - INFO     - rp_response     - Generating response using Local generator (mistral-small3.1:24b)...
+2025-04-23 00:33:16,837 - INFO     - generator       - --- Starting Local Response Generation ---
+2025-04-23 00:33:16,837 - INFO     - generator       - Generating narrative action via Local Ollama...
+2025-04-23 00:33:16,837 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.7, repeat_penalty: 1.1)
+2025-04-23 00:33:32,716 - INFO     - generator       - Response received successfully from Ollama: '*Poppy's eyes widen in shock, her breath hitching as she reaches out to gently grasp Lin's hand, her...'
+2025-04-23 00:33:32,716 - INFO     - generator       - Extracted action via regex: *Poppy's eyes widen in shock, her breath hitching as she reaches out to gently grasp Lin's hand, her own hand trembling slightly*
+2025-04-23 00:33:32,716 - INFO     - generator       - Selected narrative action (Local): *Poppy's eyes widen in shock, her breath hitching as she reaches out to gently grasp Lin's hand, her own hand trembling slightly*
+2025-04-23 00:33:32,716 - INFO     - generator       - Fatigue state for prompt: is feeling extremely exhausted and barely able to keep their eyes open.
+2025-04-23 00:33:32,716 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.8, repeat_penalty: 1.1)
+2025-04-23 00:35:19,097 - INFO     - generator       - Response received successfully from Ollama: '"*Poppy's grip on Lin's hand tightens for a moment before she gently releases it, her eyes never lea...'
+2025-04-23 00:35:19,098 - INFO     - generator       - Generated dialogue via Local Ollama: '"*Poppy's grip on Lin's hand tightens for a moment before she gently releases it, her eyes never lea...'
+2025-04-23 00:35:19,098 - INFO     - generator       - --- Finished Local Response Generation ---
+2025-04-23 00:35:19,098 - INFO     - rp_response     - Response generated.
+2025-04-23 00:35:19,098 - INFO     - rp_response     - Managing memory...
+2025-04-23 00:35:19,099 - INFO     - logic           - Roleplay time advanced by 0:09:20.438343 to: 2025-04-16 15:09:52
+2025-04-23 00:35:19,099 - INFO     - logic           - Fatigue level updated by EC to: 100.0
+2025-04-23 00:35:19,325 - INFO     - logic           - Memory and State managed for turn.
+2025-04-23 00:35:19,325 - INFO     - rp_response     - Memory managed.
+2025-04-23 00:35:19,325 - INFO     - rp_response     - Printing AI response...
+2025-04-23 00:35:19,326 - INFO     - rp_response     - AI response printed.
+2025-04-23 00:47:56,050 - INFO     - rp_response     - Constructing context...
+2025-04-23 00:47:56,050 - INFO     - logic           - Retrieving relevant memories for query: 'Thank you... Recently I just been feeling I lost control of my life *I take your hand and I touch yo...'
+2025-04-23 00:47:56,086 - INFO     - logic           - Retrieved 5 relevant memories via RAG.
+2025-04-23 00:47:56,087 - INFO     - logic           - Context constructed successfully.
+2025-04-23 00:47:56,087 - INFO     - rp_response     - Context constructed.
+2025-04-23 00:47:56,087 - INFO     - rp_response     - Generating response using Local generator (mistral-small3.1:24b)...
+2025-04-23 00:47:56,087 - INFO     - generator       - --- Starting Local Response Generation ---
+2025-04-23 00:47:56,087 - INFO     - generator       - Generating narrative action via Local Ollama...
+2025-04-23 00:47:56,087 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.7, repeat_penalty: 1.1)
+2025-04-23 00:48:34,320 - INFO     - generator       - Response received successfully from Ollama: '*Poppy's grip on Lin's hand tightens momentarily, her voice softening as she leans in closer, her ey...'
+2025-04-23 00:48:34,320 - INFO     - generator       - Extracted action via regex: *Poppy's grip on Lin's hand tightens momentarily, her voice softening as she leans in closer, her eyes filled with a mix of concern and determination, but her posture remains rigid, betraying her inner turmoil.*
+2025-04-23 00:48:34,320 - INFO     - generator       - Selected narrative action (Local): *Poppy's grip on Lin's hand tightens momentarily, her voice softening as she leans in closer, her eyes filled with a mix of concern and determination, but her posture remains rigid, betraying her inner turmoil.*
+2025-04-23 00:48:34,320 - INFO     - generator       - Fatigue state for prompt: is feeling extremely exhausted and barely able to keep their eyes open.
+2025-04-23 00:48:34,320 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.8, repeat_penalty: 1.1)
+2025-04-23 00:50:21,382 - INFO     - generator       - Response received successfully from Ollama: 'Poppy's voice quivers slightly, her grip on Lin's hand tightening before she gently pulls away, her ...'
+2025-04-23 00:50:21,382 - INFO     - generator       - Generated dialogue via Local Ollama: 'Poppy's voice quivers slightly, her grip on Lin's hand tightening before she gently pulls away, her ...'
+2025-04-23 00:50:21,382 - INFO     - generator       - --- Finished Local Response Generation ---
+2025-04-23 00:50:21,382 - INFO     - rp_response     - Response generated.
+2025-04-23 00:50:21,382 - INFO     - rp_response     - Managing memory...
+2025-04-23 00:50:21,383 - INFO     - logic           - Roleplay time advanced by 0:45:06.852684 to: 2025-04-16 15:54:59
+2025-04-23 00:50:21,383 - INFO     - logic           - Fatigue level updated by EC to: 100.0
+2025-04-23 00:50:21,431 - INFO     - logic           - Memory and State managed for turn.
+2025-04-23 00:50:21,431 - INFO     - rp_response     - Memory managed.
+2025-04-23 00:50:21,431 - INFO     - rp_response     - Printing AI response...
+2025-04-23 00:50:21,431 - INFO     - rp_response     - AI response printed.
+2025-04-23 00:52:31,337 - INFO     - rp_response     - Constructing context...
+2025-04-23 00:52:31,337 - INFO     - logic           - Retrieving relevant memories for query: 'That's the problem... *I touch your hand, touching our fingers* I'm alone... My family didn't care, ...'
+2025-04-23 00:52:31,363 - INFO     - logic           - Retrieved 5 relevant memories via RAG.
+2025-04-23 00:52:31,363 - INFO     - logic           - Context constructed successfully.
+2025-04-23 00:52:31,364 - INFO     - rp_response     - Context constructed.
+2025-04-23 00:52:31,364 - INFO     - rp_response     - Generating response using Local generator (mistral-small3.1:24b)...
+2025-04-23 00:52:31,364 - INFO     - generator       - --- Starting Local Response Generation ---
+2025-04-23 00:52:31,364 - INFO     - generator       - Generating narrative action via Local Ollama...
+2025-04-23 00:52:31,364 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.7, repeat_penalty: 1.1)
+2025-04-23 00:52:46,654 - INFO     - generator       - Response received successfully from Ollama: '*Poppy gently squeezes Lin's hand, her eyes welling up with tears as she whispers, "You're not alone...'
+2025-04-23 00:52:46,654 - INFO     - generator       - Extracted action via regex: *Poppy gently squeezes Lin's hand, her eyes welling up with tears as she whispers, "You're not alone now."*
+2025-04-23 00:52:46,655 - INFO     - generator       - Selected narrative action (Local): *Poppy gently squeezes Lin's hand, her eyes welling up with tears as she whispers, "You're not alone now."*
+2025-04-23 00:52:46,655 - INFO     - generator       - Fatigue state for prompt: is feeling extremely exhausted and barely able to keep their eyes open.
+2025-04-23 00:52:46,655 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.8, repeat_penalty: 1.1)
+2025-04-23 00:54:00,230 - INFO     - generator       - Response received successfully from Ollama: 'You're not alone now. You have me. And I... I won't let you go through this alone. I promise. Even i...'
+2025-04-23 00:54:00,231 - INFO     - generator       - Generated dialogue via Local Ollama: 'You're not alone now. You have me. And I... I won't let you go through this alone. I promise. Even i...'
+2025-04-23 00:54:00,231 - INFO     - generator       - --- Finished Local Response Generation ---
+2025-04-23 00:54:00,231 - INFO     - rp_response     - Response generated.
+2025-04-23 00:54:00,231 - INFO     - rp_response     - Managing memory...
+2025-04-23 00:54:00,231 - INFO     - logic           - Roleplay time advanced by 0:10:56.546037 to: 2025-04-16 16:05:56
+2025-04-23 00:54:00,232 - INFO     - logic           - Fatigue level updated by EC to: 100.0
+2025-04-23 00:54:00,334 - INFO     - logic           - Memory and State managed for turn.
+2025-04-23 00:54:00,334 - INFO     - rp_response     - Memory managed.
+2025-04-23 00:54:00,334 - INFO     - rp_response     - Printing AI response...
+2025-04-23 00:54:00,335 - INFO     - rp_response     - AI response printed.
+2025-04-23 00:54:33,427 - INFO     - rp_response     - Constructing context...
+2025-04-23 00:54:33,427 - INFO     - logic           - Retrieving relevant memories for query: 'What time it is? I feel we've been talking for some time now Poppy... Topic: Personal/Emotional Disc...'
+2025-04-23 00:54:33,443 - INFO     - logic           - Retrieved 5 relevant memories via RAG.
+2025-04-23 00:54:33,446 - INFO     - logic           - Context constructed successfully.
+2025-04-23 00:54:33,446 - INFO     - rp_response     - Context constructed.
+2025-04-23 00:54:33,446 - INFO     - rp_response     - Generating response using Local generator (mistral-small3.1:24b)...
+2025-04-23 00:54:33,447 - INFO     - generator       - --- Starting Local Response Generation ---
+2025-04-23 00:54:33,447 - INFO     - generator       - Generating narrative action via Local Ollama...
+2025-04-23 00:54:33,447 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.7, repeat_penalty: 1.1)
+2025-04-23 00:54:52,131 - INFO     - generator       - Response received successfully from Ollama: '*Poppy glances at her watch, then back to Lin, her voice soft and weary, "It's getting late, Lin. Le...'
+2025-04-23 00:54:52,132 - INFO     - generator       - Extracted action via regex: *Poppy glances at her watch, then back to Lin, her voice soft and weary, "It's getting late, Lin. Let's take a break if you need to."*
+2025-04-23 00:54:52,132 - INFO     - generator       - Selected narrative action (Local): *Poppy glances at her watch, then back to Lin, her voice soft and weary, "It's getting late, Lin. Let's take a break if you need to."*
+2025-04-23 00:54:52,132 - INFO     - generator       - Fatigue state for prompt: is feeling extremely exhausted and barely able to keep their eyes open.
+2025-04-23 00:54:52,132 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.8, repeat_penalty: 1.1)
+2025-04-23 00:55:43,288 - INFO     - generator       - Response received successfully from Ollama: '"Yeah, it feels like we've been at this for hours. I'm beat too. *She rubs her temples, trying to ma...'
+2025-04-23 00:55:43,289 - INFO     - generator       - Generated dialogue via Local Ollama: 'Yeah, it feels like we've been at this for hours. I'm beat too. *She rubs her temples, trying to mas...'
+2025-04-23 00:55:43,289 - INFO     - generator       - --- Finished Local Response Generation ---
+2025-04-23 00:55:43,289 - INFO     - rp_response     - Response generated.
+2025-04-23 00:55:43,289 - INFO     - rp_response     - Managing memory...
+2025-04-23 00:55:43,289 - INFO     - logic           - Roleplay time advanced by 0:05:09.173403 to: 2025-04-16 16:11:05
+2025-04-23 00:55:43,289 - INFO     - logic           - Fatigue level updated by EC to: 100.0
+2025-04-23 00:55:43,328 - INFO     - logic           - Memory and State managed for turn.
+2025-04-23 00:55:43,328 - INFO     - rp_response     - Memory managed.
+2025-04-23 00:55:43,328 - INFO     - rp_response     - Printing AI response...
+2025-04-23 00:55:43,329 - INFO     - rp_response     - AI response printed.
+2025-04-23 00:57:40,873 - INFO     - rp_response     - Constructing context...
+2025-04-23 00:57:40,873 - INFO     - logic           - Retrieving relevant memories for query: 'I... I cannot promise that... I'm sorry... But... Just tell me what time it is please... Topic: Pers...'
+2025-04-23 00:57:40,894 - INFO     - logic           - Retrieved 5 relevant memories via RAG.
+2025-04-23 00:57:40,895 - INFO     - logic           - Context constructed successfully.
+2025-04-23 00:57:40,895 - INFO     - rp_response     - Context constructed.
+2025-04-23 00:57:40,895 - INFO     - rp_response     - Generating response using Local generator (mistral-small3.1:24b)...
+2025-04-23 00:57:40,895 - INFO     - generator       - --- Starting Local Response Generation ---
+2025-04-23 00:57:40,895 - INFO     - generator       - Generating narrative action via Local Ollama...
+2025-04-23 00:57:40,895 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.7, repeat_penalty: 1.1)
+2025-04-23 00:57:55,335 - INFO     - generator       - Response received successfully from Ollama: '*Poppy hesitates, then slowly reaches into her pocket to pull out her phone, her fingers trembling s...'
+2025-04-23 00:57:55,335 - INFO     - generator       - Extracted action via regex: *Poppy hesitates, then slowly reaches into her pocket to pull out her phone, her fingers trembling slightly as she checks the time.*
+2025-04-23 00:57:55,335 - INFO     - generator       - Selected narrative action (Local): *Poppy hesitates, then slowly reaches into her pocket to pull out her phone, her fingers trembling slightly as she checks the time.*
+2025-04-23 00:57:55,336 - INFO     - generator       - Fatigue state for prompt: is feeling extremely exhausted and barely able to keep their eyes open.
+2025-04-23 00:57:55,336 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.8, repeat_penalty: 1.1)
+2025-04-23 01:00:16,887 - INFO     - generator       - Response received successfully from Ollama: '"Almost 4:15. We've been at this for a while." *Poppy sighs, her voice barely above a whisper as she...'
+2025-04-23 01:00:16,888 - INFO     - generator       - Generated dialogue via Local Ollama: 'Almost 4:15. We've been at this for a while." *Poppy sighs, her voice barely above a whisper as she ...'
+2025-04-23 01:00:16,888 - INFO     - generator       - --- Finished Local Response Generation ---
+2025-04-23 01:00:16,888 - INFO     - rp_response     - Response generated.
+2025-04-23 01:00:16,888 - INFO     - rp_response     - Managing memory...
+2025-04-23 01:00:16,888 - INFO     - logic           - Roleplay time advanced by 0:13:40.796053 to: 2025-04-16 16:24:46
+2025-04-23 01:00:16,888 - INFO     - logic           - Fatigue level updated by EC to: 100.0
+2025-04-23 01:00:16,969 - INFO     - logic           - Memory and State managed for turn.
+2025-04-23 01:00:16,969 - INFO     - rp_response     - Memory managed.
+2025-04-23 01:00:16,969 - INFO     - rp_response     - Printing AI response...
+2025-04-23 01:00:16,970 - INFO     - rp_response     - AI response printed.
+2025-04-23 01:01:17,366 - INFO     - rp_response     - Constructing context...
+2025-04-23 01:01:17,366 - INFO     - logic           - Retrieving relevant memories for query: '*I just sigh moving away from your shoulder to then take my backpack and stand up* We said we were g...'
+2025-04-23 01:01:17,393 - INFO     - logic           - Retrieved 5 relevant memories via RAG.
+2025-04-23 01:01:17,393 - INFO     - logic           - Context constructed successfully.
+2025-04-23 01:01:17,393 - INFO     - rp_response     - Context constructed.
+2025-04-23 01:01:17,394 - INFO     - rp_response     - Generating response using Local generator (mistral-small3.1:24b)...
+2025-04-23 01:01:17,394 - INFO     - generator       - --- Starting Local Response Generation ---
+2025-04-23 01:01:17,394 - INFO     - generator       - Generating narrative action via Local Ollama...
+2025-04-23 01:01:17,394 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.7, repeat_penalty: 1.1)
+2025-04-23 01:01:34,155 - INFO     - generator       - Response received successfully from Ollama: '*Poppy's eyes widen briefly before she looks down, her voice tightening as she stands up abruptly, h...'
+2025-04-23 01:01:34,156 - INFO     - generator       - Extracted action via regex: *Poppy's eyes widen briefly before she looks down, her voice tightening as she stands up abruptly, her backpack slung over her shoulder.*
+2025-04-23 01:01:34,156 - INFO     - generator       - Selected narrative action (Local): *Poppy's eyes widen briefly before she looks down, her voice tightening as she stands up abruptly, her backpack slung over her shoulder.*
+2025-04-23 01:01:34,157 - INFO     - generator       - Fatigue state for prompt: is feeling extremely exhausted and barely able to keep their eyes open.
+2025-04-23 01:01:34,158 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.8, repeat_penalty: 1.1)
+2025-04-23 01:03:12,127 - INFO     - generator       - Response received successfully from Ollama: '"Yeah, I remember. You're right, we did say that. *Poppy's voice is strained, her eyes darting aroun...'
+2025-04-23 01:03:12,128 - INFO     - generator       - Generated dialogue via Local Ollama: '"Yeah, I remember. You're right, we did say that. *Poppy's voice is strained, her eyes darting aroun...'
+2025-04-23 01:03:12,128 - INFO     - generator       - --- Finished Local Response Generation ---
+2025-04-23 01:03:12,128 - INFO     - rp_response     - Response generated.
+2025-04-23 01:03:12,128 - INFO     - rp_response     - Managing memory...
+2025-04-23 01:03:12,128 - INFO     - logic           - Roleplay time advanced by 0:08:45.720356 to: 2025-04-16 16:33:31
+2025-04-23 01:03:12,128 - INFO     - logic           - Fatigue level updated by EC to: 100.0
+2025-04-23 01:03:12,182 - INFO     - logic           - Memory and State managed for turn.
+2025-04-23 01:03:12,182 - INFO     - rp_response     - Memory managed.
+2025-04-23 01:03:12,182 - INFO     - rp_response     - Printing AI response...
+2025-04-23 01:03:12,182 - INFO     - rp_response     - AI response printed.
+2025-04-23 01:04:20,801 - INFO     - rp_response     - Constructing context...
+2025-04-23 01:04:20,801 - INFO     - logic           - Retrieving relevant memories for query: 'I cannot promise things... Let's just go to somewhere else... I sad a restaurant or market? I didn't...'
+2025-04-23 01:04:20,831 - INFO     - logic           - Retrieved 5 relevant memories via RAG.
+2025-04-23 01:04:20,832 - INFO     - logic           - Context constructed successfully.
+2025-04-23 01:04:20,832 - INFO     - rp_response     - Context constructed.
+2025-04-23 01:04:20,832 - INFO     - rp_response     - Generating response using Local generator (mistral-small3.1:24b)...
+2025-04-23 01:04:20,834 - INFO     - generator       - --- Starting Local Response Generation ---
+2025-04-23 01:04:20,834 - INFO     - generator       - Generating narrative action via Local Ollama...
+2025-04-23 01:04:20,834 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.7, repeat_penalty: 1.1)
+2025-04-23 01:04:39,012 - INFO     - generator       - Response received successfully from Ollama: '*Poppy's shoulders slump slightly as she lets out a heavy sigh, her eyes darting around the room bef...'
+2025-04-23 01:04:39,012 - INFO     - generator       - Extracted action via regex: *Poppy's shoulders slump slightly as she lets out a heavy sigh, her eyes darting around the room before settling on Lin, her expression a mix of frustration and resignation.*
+2025-04-23 01:04:39,012 - INFO     - generator       - Selected narrative action (Local): *Poppy's shoulders slump slightly as she lets out a heavy sigh, her eyes darting around the room before settling on Lin, her expression a mix of frustration and resignation.*
+2025-04-23 01:04:39,013 - INFO     - generator       - Fatigue state for prompt: is feeling extremely exhausted and barely able to keep their eyes open.
+2025-04-23 01:04:39,013 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.8, repeat_penalty: 1.1)
+2025-04-23 01:05:22,219 - INFO     - generator       - Response received successfully from Ollama: 'You know what? Fine. If you can't promise anything right now, at least let's get out of here. A rest...'
+2025-04-23 01:05:22,220 - INFO     - generator       - Generated dialogue via Local Ollama: 'You know what? Fine. If you can't promise anything right now, at least let's get out of here. A rest...'
+2025-04-23 01:05:22,220 - INFO     - generator       - --- Finished Local Response Generation ---
+2025-04-23 01:05:22,220 - INFO     - rp_response     - Response generated.
+2025-04-23 01:05:22,220 - INFO     - rp_response     - Managing memory...
+2025-04-23 01:05:22,220 - INFO     - logic           - Pending location target set to: Mini Market based on user input.
+2025-04-23 01:05:22,220 - INFO     - logic           - Roleplay time advanced by 0:06:30.275904 to: 2025-04-16 16:40:02
+2025-04-23 01:05:22,220 - INFO     - logic           - Fatigue level updated by EC to: 100.0
+2025-04-23 01:05:22,220 - INFO     - logic           - AI response did not contain movement cues. Deferring location change to Mini Market.
+2025-04-23 01:05:22,254 - INFO     - logic           - Memory and State managed for turn.
+2025-04-23 01:05:22,254 - INFO     - rp_response     - Memory managed.
+2025-04-23 01:05:22,254 - INFO     - rp_response     - Printing AI response...
+2025-04-23 01:05:22,255 - INFO     - rp_response     - AI response printed.
+2025-04-23 01:06:54,069 - INFO     - rp_response     - Constructing context...
+2025-04-23 01:06:54,069 - INFO     - logic           - Retrieving relevant memories for query: 'B-But... I know I said we should go to certain place because I wanted to show you, but I don't know ...'
+2025-04-23 01:06:54,093 - INFO     - logic           - Retrieved 5 relevant memories via RAG.
+2025-04-23 01:06:54,094 - INFO     - logic           - Context constructed successfully.
+2025-04-23 01:06:54,094 - INFO     - rp_response     - Context constructed.
+2025-04-23 01:06:54,094 - INFO     - rp_response     - Generating response using Local generator (mistral-small3.1:24b)...
+2025-04-23 01:06:54,094 - INFO     - generator       - --- Starting Local Response Generation ---
+2025-04-23 01:06:54,094 - INFO     - generator       - Generating narrative action via Local Ollama...
+2025-04-23 01:06:54,094 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.7, repeat_penalty: 1.1)
+2025-04-23 01:07:13,282 - INFO     - generator       - Response received successfully from Ollama: '*Poppy's eyes soften briefly before she rubs her temples, her voice trembling slightly as she interr...'
+2025-04-23 01:07:13,283 - INFO     - generator       - Extracted action via regex: *Poppy's eyes soften briefly before she rubs her temples, her voice trembling slightly as she interrupts, "Lin, it's okay. Just tell me what's on your mind."*
+2025-04-23 01:07:13,283 - INFO     - generator       - Selected narrative action (Local): *Poppy's eyes soften briefly before she rubs her temples, her voice trembling slightly as she interrupts, "Lin, it's okay. Just tell me what's on your mind."*
+2025-04-23 01:07:13,283 - INFO     - generator       - Fatigue state for prompt: is feeling extremely exhausted and barely able to keep their eyes open.
+2025-04-23 01:07:13,283 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.8, repeat_penalty: 1.1)
+2025-04-23 01:08:49,089 - INFO     - generator       - Response received successfully from Ollama: '"*Poppy's voice softens a little, her eyes meeting yours with a mix of frustration and concern.*
+
+Lo...'
+2025-04-23 01:08:49,089 - INFO     - generator       - Generated dialogue via Local Ollama: '*Poppy's voice softens a little, her eyes meeting yours with a mix of frustration and concern.*
+
+Loo...'
+2025-04-23 01:08:49,089 - INFO     - generator       - --- Finished Local Response Generation ---
+2025-04-23 01:08:49,090 - INFO     - rp_response     - Response generated.
+2025-04-23 01:08:49,090 - INFO     - rp_response     - Managing memory...
+2025-04-23 01:08:49,090 - INFO     - logic           - Roleplay time advanced by 0:10:20.609425 to: 2025-04-16 16:50:22
+2025-04-23 01:08:49,090 - INFO     - logic           - Fatigue level updated by EC to: 100.0
+2025-04-23 01:08:49,090 - INFO     - logic           - AI response indicates movement. Resolving pending location change: Moving from 'School' to 'Mini Market'
+2025-04-23 01:08:49,090 - INFO     - logic           - Action and Topic reset due to significant location change.
+2025-04-23 01:08:49,374 - INFO     - logic           - Memory and State managed for turn.
+2025-04-23 01:08:49,374 - INFO     - rp_response     - Memory managed.
+2025-04-23 01:08:49,374 - INFO     - rp_response     - Printing AI response...
+2025-04-23 01:08:49,375 - INFO     - rp_response     - AI response printed.
+2025-04-23 01:09:46,463 - INFO     - rp_response     - Constructing context...
+2025-04-23 01:09:46,463 - INFO     - logic           - Retrieving relevant memories for query: 'O-Okay... *I just step out of the classroom, looking outside* Topic: Location Change / Settling In...'
+2025-04-23 01:09:46,487 - INFO     - logic           - Retrieved 5 relevant memories via RAG.
+2025-04-23 01:09:46,488 - INFO     - logic           - Context constructed successfully.
+2025-04-23 01:09:46,489 - INFO     - rp_response     - Context constructed.
+2025-04-23 01:09:46,489 - INFO     - rp_response     - Generating response using Local generator (mistral-small3.1:24b)...
+2025-04-23 01:09:46,489 - INFO     - generator       - --- Starting Local Response Generation ---
+2025-04-23 01:09:46,489 - INFO     - generator       - Generating narrative action via Local Ollama...
+2025-04-23 01:09:46,489 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.7, repeat_penalty: 1.1)
+2025-04-23 01:10:08,598 - INFO     - generator       - Response received successfully from Ollama: '*Poppy takes a deep, shaky breath, her eyes flicking nervously around the Mini Market as she waits f...'
+2025-04-23 01:10:08,598 - INFO     - generator       - Extracted action via regex: *Poppy takes a deep, shaky breath, her eyes flicking nervously around the Mini Market as she waits for Lin to continue, her hands clenching and unclenching at her sides.*
+2025-04-23 01:10:08,598 - INFO     - generator       - Selected narrative action (Local): *Poppy takes a deep, shaky breath, her eyes flicking nervously around the Mini Market as she waits for Lin to continue, her hands clenching and unclenching at her sides.*
+2025-04-23 01:10:08,598 - INFO     - generator       - Fatigue state for prompt: is feeling extremely exhausted and barely able to keep their eyes open.
+2025-04-23 01:10:08,599 - INFO     - generator       - Sending payload to Ollama API (model: mistral-small3.1:24b, temp: 0.8, repeat_penalty: 1.1)
+2025-04-23 01:10:53,624 - INFO     - generator       - Response received successfully from Ollama: 'Alright, let's get this over with. So, what's been on your mind, Lin? You look like you've got a lot...'
+2025-04-23 01:10:53,625 - INFO     - generator       - Generated dialogue via Local Ollama: 'Alright, let's get this over with. So, what's been on your mind, Lin? You look like you've got a lot...'
+2025-04-23 01:10:53,625 - INFO     - generator       - --- Finished Local Response Generation ---
+2025-04-23 01:10:53,625 - INFO     - rp_response     - Response generated.
+2025-04-23 01:10:53,625 - INFO     - rp_response     - Managing memory...
+2025-04-23 01:10:53,625 - INFO     - logic           - Topic focus updated from 'Location Change / Settling In' to 'Personal/Emotional Discussion'
+2025-04-23 01:10:53,625 - INFO     - logic           - Roleplay time advanced by 0:06:13.606218 to: 2025-04-16 16:56:36
+2025-04-23 01:10:53,625 - INFO     - logic           - Fatigue level updated by EC to: 100.0
+2025-04-23 01:10:53,672 - INFO     - logic           - Memory and State managed for turn.
+2025-04-23 01:10:53,672 - INFO     - rp_response     - Memory managed.
+2025-04-23 01:10:53,672 - INFO     - rp_response     - Printing AI response...
+2025-04-23 01:10:53,672 - INFO     - rp_response     - AI response printed.
+2025-04-23 01:12:02,945 - INFO     - rp_response     - Quit command received. Saving state...
+2025-04-23 01:12:02,945 - INFO     - logic           - Attempting to save comprehensive state to 'save_state.json'...
+2025-04-23 01:12:02,945 - WARNING  - logic           - Could not save 'current_trust' or 'current_intimacy'.
+2025-04-23 01:12:02,949 - INFO     - logic           - General state saved successfully to 'save_state.json'.
+2025-04-23 01:12:02,949 - INFO     - logic           - Triggering vector memory save...
+2025-04-23 01:12:02,955 - INFO     - rp_response     - --- Exiting main function ---
+2025-04-23 01:12:02,956 - INFO     - rp_response     - --- Script finished ---

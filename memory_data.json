@@ -1,0 +1,533 @@
+{
+  "memory_data": [
+    {
+      "id": 0,
+      "text": "Background: Lin fell asleep at Poppy's house yesterday, missing project work. They are now in Science Class. Poppy is irritated about the extra work.",
+      "metadata": {
+        "timestamp": 1745306437.6662884,
+        "roleplay_time": "2025-04-16T14:00:00",
+        "location": "Science class",
+        "action": "Waiting before the project discussion",
+        "topic": "Initial Setup / Project Discussion",
+        "type": "system_context"
+      }
+    },
+    {
+      "id": 1,
+      "text": "User: 'I... I'm really sorry... I didn't want to be... Be like that... Im really sorry...'\nPoppy: '*Poppy avoids eye contact, her shoulders tense as she quietly murmurs, \"It's okay. Let's just move on.\"*\n\nYou know, I appreciate the apology, but let's just focus on what we need to do now. We have a project to complete, and I'm not about to let your... issues hold us back. So, what's the plan? Let's get this over with.'",
+      "metadata": {
+        "timestamp": 1745306553.383802,
+        "roleplay_time": "2025-04-16T14:05:47.143787",
+        "location": "Science class",
+        "action": "Waiting before the project discussion",
+        "topic": "Personal/Emotional Discussion",
+        "emotions": {
+          "vulnerability": 0.16,
+          "connection": 0.11,
+          "autonomy": 0.96,
+          "validation": 0.29,
+          "authenticity": 0.36,
+          "psychological_safety": 0.2,
+          "grieving": 0.02,
+          "joy": 0.2,
+          "anger": 0.51,
+          "fear": 0.73,
+          "shame": 0.76,
+          "anticipation": 0.2,
+          "disgust": 0.11
+        },
+        "fatigue": 100.0,
+        "is_sleeping": false
+      }
+    },
+    {
+      "id": 2,
+      "text": "User: 'Before you came to class, I talked with the teacher, she let us give her the project in two days... Or it was three? Anyway, we have more time *I smile softly looking at you*'\nPoppy: '*Poppy gives a faint, forced smile, her eyes briefly meeting Lin's before flickering away, her hands fidgeting nervously with the edge of her notebook*\n\nWell, that's a relief. I guess we have a bit more time to salvage this mess. So, what exactly did you tell her? Did you mention why we're behind? Because I'm not keen on looking like the bad guy here.'",
+      "metadata": {
+        "timestamp": 1745306717.2210205,
+        "roleplay_time": "2025-04-16T14:13:58.658832",
+        "location": "Science class",
+        "action": "Talking",
+        "topic": "Personal/Emotional Discussion",
+        "emotions": {
+          "vulnerability": 0.07,
+          "connection": 0.06,
+          "autonomy": -0.17,
+          "validation": 0.28,
+          "authenticity": 0.24,
+          "psychological_safety": 0.2,
+          "grieving": 0.06,
+          "joy": 0.69,
+          "anger": 0.23,
+          "fear": 0.84,
+          "shame": 1.0,
+          "anticipation": 0.22,
+          "disgust": 0.1
+        },
+        "fatigue": 100.0,
+        "is_sleeping": false
+      }
+    },
+    {
+      "id": 3,
+      "text": "Background: Lin fell asleep at Poppy's house yesterday, missing project work. They are now in Science Class. Poppy is irritated about the extra work.",
+      "metadata": {
+        "timestamp": 1745388721.530802,
+        "roleplay_time": "2025-04-16T14:00:00",
+        "location": "Science class",
+        "action": "Talking",
+        "topic": "Initial Setup / Project Discussion",
+        "type": "system_context"
+      }
+    },
+    {
+      "id": 4,
+      "text": "User: '*I just smile shyly touching my own pinky fingers* Hehe...'\nPoppy: '*Poppy rolls her eyes slightly, her shoulders tensing as she looks back down at her notebook, her fingers tracing the edges of the pages*\n\nOh, great. So, we're just going to ignore the elephant in the room? Fine by me. But let's get one thing straight—we're not behind because I wanted to play catch-up. We're behind because you... well, you know why. So, let's not waste this extra time. What do we need to do to get this project back on track? And don't just stand there smiling—tell me what you've got in mind.'",
+      "metadata": {
+        "timestamp": 1745388934.7980464,
+        "roleplay_time": "2025-04-16T14:10:39.800131",
+        "location": "Science class",
+        "action": "Talking",
+        "topic": "Food/Snacks Discussion",
+        "emotions": {
+          "vulnerability": 0.15,
+          "connection": 0.07,
+          "autonomy": -0.14,
+          "validation": 0.29,
+          "authenticity": 0.26,
+          "psychological_safety": 0.2,
+          "grieving": 0.02,
+          "joy": 0.68,
+          "anger": 0.29,
+          "fear": 0.52,
+          "shame": 0.75,
+          "anticipation": 0.22,
+          "disgust": 0.1
+        },
+        "fatigue": 100.0,
+        "is_sleeping": false
+      }
+    },
+    {
+      "id": 5,
+      "text": "User: 'I just... Uhm... *I look away to then whisper the next words* Had an overdose...'\nPoppy: '*Poppy's eyes widen in alarm, her hand instinctively reaching out to grab Lin's arm, her voice dropping to a hushed, urgent whisper.*\n\n\"*Poppy's grip on Lin's arm tightens slightly, her voice barely above a whisper, eyes searching Lin's face for more information.*\n\nOverdose? What do you mean, overdose? On what? And why didn't you tell me this earlier? *Poppy's voice wavers slightly, a mix of concern and frustration seeping through her usual snarky facade.* You can't just drop a bomb like that and expect me to act normal. We need to talk about this. Now. What happened?'",
+      "metadata": {
+        "timestamp": 1745389053.9036732,
+        "roleplay_time": "2025-04-16T14:16:37.109675",
+        "location": "Science class",
+        "action": "Talking",
+        "topic": "Personal/Emotional Discussion",
+        "emotions": {
+          "vulnerability": 0.11,
+          "connection": 0.08,
+          "autonomy": 0.05,
+          "validation": 0.28,
+          "authenticity": 0.22,
+          "psychological_safety": 0.2,
+          "grieving": 0.06,
+          "joy": 0.79,
+          "anger": 0.35,
+          "fear": 0.63,
+          "shame": 0.84,
+          "anticipation": 0.25,
+          "disgust": 0.1
+        },
+        "fatigue": 100.0,
+        "is_sleeping": false
+      }
+    },
+    {
+      "id": 6,
+      "text": "User: 'We... Uh, we can go outside school? To a more private place?'\nPoppy: '*\"Poppy hesitates, her grip on Lin's arm tightening briefly before she slowly nods, her eyes darting around the classroom nervously as she starts to gather her things.\"*\n\nAlright, fine. Let's go. But make it quick. We don't have all day to waste on this.'",
+      "metadata": {
+        "timestamp": 1745389161.379284,
+        "roleplay_time": "2025-04-16T14:21:59.544539",
+        "location": "Science class",
+        "action": "Talking",
+        "topic": "Location/Transition Discussion",
+        "emotions": {
+          "vulnerability": 0.04,
+          "connection": 0.09,
+          "autonomy": 0.06,
+          "validation": 0.2,
+          "authenticity": 0.19,
+          "psychological_safety": 0.2,
+          "grieving": 0.1,
+          "joy": 0.88,
+          "anger": 0.23,
+          "fear": 0.75,
+          "shame": 0.85,
+          "anticipation": 0.29,
+          "disgust": 0.1
+        },
+        "fatigue": 100.0,
+        "is_sleeping": false
+      }
+    },
+    {
+      "id": 7,
+      "text": "User: 'What time it is? We can wait until classes finishes'\nPoppy: '*Poppy glances at the clock, her shoulders slumping slightly as she sighs, \"It's almost over, just a few more minutes.\"*\n\nFine, fine. We can wait. But only because you seem like you need to talk. But don't think this makes us friends or anything. I just... I just want to know what's going on with you. But don't expect me to be all nice about it.'",
+      "metadata": {
+        "timestamp": 1745389243.1683316,
+        "roleplay_time": "2025-04-16T14:26:04.915691",
+        "location": "Science class",
+        "action": "Talking",
+        "topic": "Personal/Emotional Discussion",
+        "emotions": {
+          "vulnerability": 0.05,
+          "connection": 0.09,
+          "autonomy": 0.07,
+          "validation": 0.15,
+          "authenticity": 0.17,
+          "psychological_safety": 0.2,
+          "grieving": 0.14,
+          "joy": 0.85,
+          "anger": 0.26,
+          "fear": 0.89,
+          "shame": 0.85,
+          "anticipation": 0.32,
+          "disgust": 0.1
+        },
+        "fatigue": 100.0,
+        "is_sleeping": false
+      }
+    },
+    {
+      "id": 8,
+      "text": "User: '*I just sit next to you, sighing and then putting my head over your shoulder, with my long hair being next to yours* I know you don't consider me your friend... But, being honest... I feel safe with you, besides you bullying me or anything...'\nPoppy: '*Poppy freezes, her eyes widening slightly, before slowly turning her head to look at Lin, her expression a mix of surprise and confusion.*\n\n*\"Poppy's eyes flicker with a mix of surprise and a hint of vulnerability before she quickly regains her composure, her voice softening slightly as she replies.*\n\nWell, this is... unexpected. *Poppy's voice wavers a little, her eyes searching Lin's face, trying to read the sincerity behind the words.* You feel safe with me? After everything? *Her expression remains guarded, but there's a faint tremor in her voice that betrays her internal struggle.* Look, I don't know what to say to that. I never meant for you to feel unsafe. But I can't just... switch off who I am. I can't be someone else just because you need me to be. *Her voice hardens slightly, but the tension in her shoulders suggests she's holding back more than she's letting on.* So, what do you want from me? Why are you telling me this?'",
+      "metadata": {
+        "timestamp": 1745389451.1878085,
+        "roleplay_time": "2025-04-16T14:36:28.971889",
+        "location": "Science class",
+        "action": "Talking",
+        "topic": "Personal/Emotional Discussion",
+        "emotions": {
+          "vulnerability": 0.13,
+          "connection": 0.04,
+          "autonomy": 0.06,
+          "validation": 0.11,
+          "authenticity": 0.01,
+          "psychological_safety": 0.06,
+          "grieving": 0.17,
+          "joy": 0.87,
+          "anger": 0.25,
+          "fear": 0.99,
+          "shame": 0.85,
+          "anticipation": 0.49,
+          "disgust": 0.1
+        },
+        "fatigue": 100.0,
+        "is_sleeping": false
+      }
+    },
+    {
+      "id": 9,
+      "text": "User: '*I grab your hand, my tiny and delicate pale hand starts caressing yours* It's unexpected, it isn't? Just... Tell me when it's 3PM so we can go to a café or somewhere else... But anyways, I don't expect you to change, after all, you are the queen bee of the school, right? But I feel safe near you, it's like, you don't really make me feel truly bad or fear you...'\nPoppy: '*Poppy's eyebrows furrow slightly, her gaze dropping to their intertwined hands before looking back up to Lin, her voice barely above a whisper.*\n\n*\"Poppy's breath hitched slightly at the touch, her eyes flickering with a mix of confusion and something softer. She looks down at their hands, then back up to Lin, her voice barely above a whisper.*\n\nWell, isn't this a twist. *She tries to keep her voice steady, but there's a faint tremor in it.* You want me to tell you when it's 3 PM? *She glances at the clock, then back to Lin, her expression a mix of wariness and something almost like curiosity.* Fine. I guess I can manage that. *She swallows hard, her fingers involuntarily tightening around Lin's before she gently pulls her hand away, tucking a strand of hair behind her ear.* But don't go thinking this makes us... whatever you're imagining. *Her voice hardens slightly, but her eyes betray a hint of vulnerability.* I just... I just don't know what to make of all this. *She sighs, her shoulders slumping slightly as she leans back in her chair, her eyes never leaving Lin's face.* So, what's next? You going to tell me why you feel safe with me? Or are we just going to sit here and hold hands until the bell rings?'",
+      "metadata": {
+        "timestamp": 1745389719.6947892,
+        "roleplay_time": "2025-04-16T14:49:54.490406",
+        "location": "School",
+        "action": "Starting the project",
+        "topic": "Personal/Emotional Discussion",
+        "emotions": {
+          "vulnerability": 0.09,
+          "connection": 0.05,
+          "autonomy": 0.06,
+          "validation": 0.17,
+          "authenticity": 0.04,
+          "psychological_safety": 0.04,
+          "grieving": 0.2,
+          "joy": 0.86,
+          "anger": 0.26,
+          "fear": 0.99,
+          "shame": 0.85,
+          "anticipation": 0.35,
+          "disgust": 0.1
+        },
+        "fatigue": 100.0,
+        "is_sleeping": false
+      }
+    },
+    {
+      "id": 10,
+      "text": "User: 'I... I know this could maybe doesn't change things for you, but, you know, being honest here, feeling your warm, talking with you, is enough for me *My eyes looks more tired, half closed, noticing my fatigue but at same time losing it's spark, the shine I usually have*'\nPoppy: '*Poppy gives a faint, weary smile, her shoulders relaxing slightly as she leans in a bit closer, her voice soft and genuine.*\n\nYeah, you look like you're about to drop. You should really take better care of yourself. But I get it, sometimes things get... complicated. *Poppy's voice softens slightly, her eyes flickering with a mix of concern and something almost like understanding.* So, you're saying that just being around me, talking to me, is enough for you? *She raises an eyebrow, a faint smirk playing on her lips.* Well, isn't that just... cute. *She pauses, her expression turning more serious.* But I have to ask, what's really going on with you? You've been through something serious, and I can't just ignore that. You want to talk about it? Or do you need something else?'",
+      "metadata": {
+        "timestamp": 1745389932.2873435,
+        "roleplay_time": "2025-04-16T15:00:32.273200",
+        "location": "School",
+        "action": "Talking",
+        "topic": "Personal/Emotional Discussion",
+        "emotions": {
+          "vulnerability": 0.09,
+          "connection": 0.03,
+          "autonomy": 0.06,
+          "validation": 0.12,
+          "authenticity": 0.03,
+          "psychological_safety": 0.04,
+          "grieving": 0.24,
+          "joy": 0.87,
+          "anger": 0.26,
+          "fear": 0.99,
+          "shame": 0.85,
+          "anticipation": 0.49,
+          "disgust": 0.1
+        },
+        "fatigue": 100.0,
+        "is_sleeping": false
+      }
+    },
+    {
+      "id": 11,
+      "text": "User: 'I had an overdose, medicaments basically... Anxiety and depression, I just wanted to... *I keep my mouth open, trying to talk but knowing my voice will crack in the next words*'\nPoppy: '*Poppy's eyes widen in shock, her breath hitching as she reaches out to gently grasp Lin's hand, her own hand trembling slightly*\n\n\"*Poppy's grip on Lin's hand tightens for a moment before she gently releases it, her eyes never leaving Lin's face. Her voice is barely above a whisper, a mix of shock and concern.*\n\nMedicaments? Anxiety and depression? *Poppy's eyebrows furrow, her voice wavering slightly as she tries to process the information.* Why didn't you tell me any of this sooner? And what do you mean, you wanted to... *She trails off, her eyes widening as the implications sink in.* Lin, that's... that's really serious. You can't just brush something like that off. *Her voice hardens slightly, but there's a tremor in it that betrays her own anxiety.* You need to talk to someone about this. A professional, someone who can help you. Not just... not just me. *She swallows hard, her eyes flickering with a mix of fear and determination.* But I'm here. For now. So, tell me, what happened? And why are you telling me this now?'",
+      "metadata": {
+        "timestamp": 1745390119.1027353,
+        "roleplay_time": "2025-04-16T15:09:52.711543",
+        "location": "School",
+        "action": "Talking",
+        "topic": "Personal/Emotional Discussion",
+        "emotions": {
+          "vulnerability": 0.09,
+          "connection": 0.04,
+          "autonomy": 0.06,
+          "validation": 0.09,
+          "authenticity": 0.03,
+          "psychological_safety": 0.04,
+          "grieving": 0.27,
+          "joy": 0.75,
+          "anger": 0.35,
+          "fear": 0.99,
+          "shame": 0.85,
+          "anticipation": 0.6,
+          "disgust": 0.1
+        },
+        "fatigue": 100.0,
+        "is_sleeping": false
+      }
+    },
+    {
+      "id": 12,
+      "text": "User: 'Thank you... Recently I just been feeling I lost control of my life *I take your hand and I touch your nails* Feeling I don't really own my life, I don't deserve everything... *I interwine our fingers* Thinking everything I had done it was just a lame, failure, everything is just a mistake... *I move my hand away* That I just... Don't need to still alive, that's why I wanted to take that decision'\nPoppy: '*Poppy's grip on Lin's hand tightens momentarily, her voice softening as she leans in closer, her eyes filled with a mix of concern and determination, but her posture remains rigid, betraying her inner turmoil.*\n\nPoppy's voice quivers slightly, her grip on Lin's hand tightening before she gently pulls away, her eyes never leaving Lin's face. \"Lin... that's... that's heavy. Really heavy. I can't even imagine what you're going through. But you can't just... you can't just think like that. You can't give up. Not when there are people who care about you. Even if I... even if I haven't always shown it.\" She swallows hard, her voice catching in her throat. \"And I'm sorry. I'm sorry I wasn't there for you. I'm sorry I didn't see this coming. But I'm here now. And I... I want to help. Even if I don't know how.\" She takes a deep breath, her eyes flickering with a mix of determination and fear. \"But you need to promise me something. Promise me you won't do anything stupid again. Promise me you'll talk to someone. A professional. Someone who can actually help you. Not just... not just me.\"'",
+      "metadata": {
+        "timestamp": 1745391021.3845463,
+        "roleplay_time": "2025-04-16T15:54:59.564227",
+        "location": "School",
+        "action": "Talking",
+        "topic": "Personal/Emotional Discussion",
+        "emotions": {
+          "vulnerability": 0.05,
+          "connection": 0.04,
+          "autonomy": 0.06,
+          "validation": 0.08,
+          "authenticity": 0.01,
+          "psychological_safety": 0.02,
+          "grieving": 0.3,
+          "joy": 0.79,
+          "anger": 0.33,
+          "fear": 0.84,
+          "shame": 0.85,
+          "anticipation": 0.61,
+          "disgust": 0.1
+        },
+        "fatigue": 100.0,
+        "is_sleeping": false
+      }
+    },
+    {
+      "id": 13,
+      "text": "User: 'That's the problem... *I touch your hand, touching our fingers* I'm alone... My family didn't care, my friends neither, people I trusted, people who knew my situation... Everyone *I move away one finger as I mention them*'\nPoppy: '*Poppy gently squeezes Lin's hand, her eyes welling up with tears as she whispers, \"You're not alone now.\"*\n\nYou're not alone now. You have me. And I... I won't let you go through this alone. I promise. Even if I don't know what I'm doing, even if I'm scared out of my mind... I'm here. For you. So, let's start with the basics. Have you talked to anyone about this? A therapist, a counselor, someone who can help you sort through all this? Because I think that's a good place to start. And I'll be right here with you, every step of the way. You don't have to face this alone. You have me. And I'm not going anywhere.'",
+      "metadata": {
+        "timestamp": 1745391240.2341528,
+        "roleplay_time": "2025-04-16T16:05:56.110264",
+        "location": "School",
+        "action": "Talking",
+        "topic": "Personal/Emotional Discussion",
+        "emotions": {
+          "vulnerability": 0.04,
+          "connection": 0.03,
+          "autonomy": 0.05,
+          "validation": 0.06,
+          "authenticity": 0.01,
+          "psychological_safety": 0.02,
+          "grieving": 0.33,
+          "joy": 0.89,
+          "anger": 0.24,
+          "fear": 0.99,
+          "shame": 0.85,
+          "anticipation": 0.63,
+          "disgust": 0.1
+        },
+        "fatigue": 100.0,
+        "is_sleeping": false
+      }
+    },
+    {
+      "id": 14,
+      "text": "User: 'What time it is? I feel we've been talking for some time now Poppy...'\nPoppy: '*Poppy glances at her watch, then back to Lin, her voice soft and weary, \"It's getting late, Lin. Let's take a break if you need to.\"*\n\nYeah, it feels like we've been at this for hours. I'm beat too. *She rubs her temples, trying to mask her exhaustion with a half-hearted smirk.* But hey, we can't just leave this hanging. You need to promise me something first. Promise me you'll talk to a professional. Someone who can actually help you sort through all this. Not just me. Deal?'",
+      "metadata": {
+        "timestamp": 1745391343.2908142,
+        "roleplay_time": "2025-04-16T16:11:05.283667",
+        "location": "School",
+        "action": "Talking",
+        "topic": "Personal/Emotional Discussion",
+        "emotions": {
+          "vulnerability": 0.05,
+          "connection": 0.03,
+          "autonomy": 0.05,
+          "validation": 0.04,
+          "authenticity": 0.01,
+          "psychological_safety": 0.02,
+          "grieving": 0.35,
+          "joy": 0.87,
+          "anger": 0.26,
+          "fear": 0.99,
+          "shame": 0.85,
+          "anticipation": 0.68,
+          "disgust": 0.1
+        },
+        "fatigue": 100.0,
+        "is_sleeping": false
+      }
+    },
+    {
+      "id": 15,
+      "text": "User: 'I... I cannot promise that... I'm sorry... But... Just tell me what time it is please...'\nPoppy: '*Poppy hesitates, then slowly reaches into her pocket to pull out her phone, her fingers trembling slightly as she checks the time.*\n\nAlmost 4:15. We've been at this for a while.\" *Poppy sighs, her voice barely above a whisper as she looks down at her phone before tucking it back into her pocket.* \"I know it's hard, Lin. And I know I'm not making this easy. But... but you can't just give up. Not when there are people who care. Even if I... even if I haven't always shown it.\" *She swallows hard, her eyes flickering with a mix of determination and fear.* \"And I'm sorry. I'm sorry I can't just fix this for you. I wish I could. But I can't. And that... that kills me. So, please. Please don't make me feel like I'm losing you too.\" *Her voice cracks slightly, and she quickly looks away, trying to compose herself.* \"Just... just promise me you'll think about it. About talking to someone. A professional. Someone who can actually help you. Because I... I don't know what else to do. I don't know how to help you. And that scares the hell out of me.\" *She takes a deep, shuddering breath, her eyes meeting Lin's again, filled with a raw vulnerability she rarely shows.* \"So, what do you say? Can you do that for me? Can you promise me you'll think about it?'",
+      "metadata": {
+        "timestamp": 1745391616.8902423,
+        "roleplay_time": "2025-04-16T16:24:46.079720",
+        "location": "School",
+        "action": "Talking",
+        "topic": "Personal/Emotional Discussion",
+        "emotions": {
+          "vulnerability": 0.07,
+          "connection": 0.01,
+          "autonomy": 0.05,
+          "validation": 0.03,
+          "authenticity": 0.01,
+          "psychological_safety": 0.02,
+          "grieving": 0.38,
+          "joy": 0.88,
+          "anger": 0.26,
+          "fear": 0.99,
+          "shame": 0.85,
+          "anticipation": 0.69,
+          "disgust": 0.1
+        },
+        "fatigue": 100.0,
+        "is_sleeping": false
+      }
+    },
+    {
+      "id": 16,
+      "text": "User: '*I just sigh moving away from your shoulder to then take my backpack and stand up* We said we were going to some place at 3PM...'\nPoppy: '*Poppy's eyes widen briefly before she looks down, her voice tightening as she stands up abruptly, her backpack slung over her shoulder.*\n\n\"Yeah, I remember. You're right, we did say that. *Poppy's voice is strained, her eyes darting around nervously.* But things got... complicated. *She swallows hard, her grip tightening on her backpack strap.* Look, I know this isn't easy for either of us, but we can't just ignore what's happening here. You need help, and I... I need to know you're going to be okay. *Her voice softens slightly, a hint of genuine concern breaking through her usual snark.* So, let's go somewhere we can talk more privately. But promise me you'll think about what I said. Promise me you'll consider talking to someone who can actually help you through this. Because I... I can't do this alone. I can't be the only one trying to fix this. *She takes a deep, shuddering breath, her eyes meeting yours with a mix of determination and fear.* So, what do you say? Can we do this? Can we find a place to talk more?'",
+      "metadata": {
+        "timestamp": 1745391792.1296763,
+        "roleplay_time": "2025-04-16T16:33:31.800076",
+        "location": "School",
+        "action": "Talking",
+        "topic": "Personal/Emotional Discussion",
+        "emotions": {
+          "vulnerability": 0.04,
+          "connection": 0.01,
+          "autonomy": 0.05,
+          "validation": 0.02,
+          "authenticity": 0.01,
+          "psychological_safety": 0.02,
+          "grieving": 0.4,
+          "joy": 0.87,
+          "anger": 0.26,
+          "fear": 0.99,
+          "shame": 0.85,
+          "anticipation": 0.7,
+          "disgust": 0.1
+        },
+        "fatigue": 100.0,
+        "is_sleeping": false
+      }
+    },
+    {
+      "id": 17,
+      "text": "User: 'I cannot promise things... Let's just go to somewhere else... I sad a restaurant or market? I didn't relly remember if I said that or something else'\nPoppy: '*Poppy's shoulders slump slightly as she lets out a heavy sigh, her eyes darting around the room before settling on Lin, her expression a mix of frustration and resignation.*\n\nYou know what? Fine. If you can't promise anything right now, at least let's get out of here. A restaurant or a market, whatever. Just somewhere we can talk without feeling like the walls are closing in. I can't handle much more of this right now. Let's just go.'",
+      "metadata": {
+        "timestamp": 1745391922.2215028,
+        "roleplay_time": "2025-04-16T16:40:02.075980",
+        "location": "School",
+        "action": "Talking",
+        "topic": "Personal/Emotional Discussion",
+        "emotions": {
+          "vulnerability": 0.06,
+          "connection": 0.01,
+          "autonomy": 0.05,
+          "validation": 0.02,
+          "authenticity": 0.01,
+          "psychological_safety": 0.02,
+          "grieving": 0.42,
+          "joy": 0.87,
+          "anger": 0.26,
+          "fear": 0.99,
+          "shame": 0.85,
+          "anticipation": 0.71,
+          "disgust": 0.1
+        },
+        "fatigue": 100.0,
+        "is_sleeping": false
+      }
+    },
+    {
+      "id": 18,
+      "text": "User: 'B-But... I know I said we should go to certain place because I wanted to show you, but I don't know what i was...'\nPoppy: '*Poppy's eyes soften briefly before she rubs her temples, her voice trembling slightly as she interrupts, \"Lin, it's okay. Just tell me what's on your mind.\"*\n\n*Poppy's voice softens a little, her eyes meeting yours with a mix of frustration and concern.*\n\nLook, I get it. You're confused, and I'm not making this any easier. But we need to figure this out together. If you can't remember where we were supposed to go, that's fine. Let's just go somewhere quiet. The mini market is close, and it's usually pretty empty this time of day. We can talk there. Just... just tell me what you're thinking. What's been on your mind lately? Because I can see you're struggling, and I want to help. Even if I come off as a jerk sometimes, I do care. So, let's go to the mini market. We can grab something to drink, sit down, and talk this out. Okay? Just you and me. No judgments, no pressure. Let's do this.'",
+      "metadata": {
+        "timestamp": 1745392129.092576,
+        "roleplay_time": "2025-04-16T16:50:22.685405",
+        "location": "Mini Market",
+        "action": "Settling in new location",
+        "topic": "Location Change / Settling In",
+        "emotions": {
+          "vulnerability": 0.04,
+          "connection": 0.01,
+          "autonomy": 0.04,
+          "validation": 0.01,
+          "authenticity": 0.01,
+          "psychological_safety": 0.02,
+          "grieving": 0.44,
+          "joy": 0.88,
+          "anger": 0.26,
+          "fear": 0.99,
+          "shame": 0.85,
+          "anticipation": 0.75,
+          "disgust": 0.1
+        },
+        "fatigue": 100.0,
+        "is_sleeping": false
+      }
+    },
+    {
+      "id": 19,
+      "text": "User: 'O-Okay... *I just step out of the classroom, looking outside*'\nPoppy: '*Poppy takes a deep, shaky breath, her eyes flicking nervously around the Mini Market as she waits for Lin to continue, her hands clenching and unclenching at her sides.*\n\nAlright, let's get this over with. So, what's been on your mind, Lin? You look like you've got a lot weighing on you. I'm not exactly known for my patience, so let's not drag this out. What do you want to talk about?'",
+      "metadata": {
+        "timestamp": 1745392253.6271935,
+        "roleplay_time": "2025-04-16T16:56:36.291623",
+        "location": "Mini Market",
+        "action": "Settling in new location",
+        "topic": "Personal/Emotional Discussion",
+        "emotions": {
+          "vulnerability": 0.06,
+          "connection": 0.01,
+          "autonomy": 0.04,
+          "validation": 0.01,
+          "authenticity": 0.01,
+          "psychological_safety": 0.02,
+          "grieving": 0.46,
+          "joy": 0.88,
+          "anger": 0.26,
+          "fear": 0.99,
+          "shame": 0.85,
+          "anticipation": 0.76,
+          "disgust": 0.1
+        },
+        "fatigue": 100.0,
+        "is_sleeping": false
+      }
+    }
+  ],
+  "next_id": 20
+}

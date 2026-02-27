@@ -1,0 +1,30 @@
+{
+    "current_roleplay_time": "2025-04-16T16:56:36.291623",
+    "last_narrative_action": "*Poppy takes a deep, shaky breath, her eyes flicking nervously around the Mini Market as she waits for Lin to continue, her hands clenching and unclenching at her sides.*",
+    "location": "Mini Market",
+    "current_action": "Settling in new location",
+    "pending_location_target": null,
+    "current_topic_focus": "Personal/Emotional Discussion",
+    "dynamic_memory": [
+        "User: 'I cannot promise things... Let's just go to somewhere else... I sad a restaurant or market? I didn't relly remember if I said that or something else'. Poppy: '*Poppy's shoulders slump slightly as she lets out a heavy sigh, her eyes darting around the room before settling on Lin, her expression a mix of frustration and resignation.*\n\nYou know what? Fine. If you can't promise anything right now, at least let's get out of here. A restaurant or a market, whatever. Just somewhere we can talk without feeling like the walls are closing in. I can't handle much more of this right now. Let's just go.'. [Loc: School] [Act: Talking] [Topic: Personal/Emotional Discussion] [Pending: Mini Market] [Emo: Fatigued, Inauthentic, Ashamed, Unsafe, Powerless, Anticipating, Joyful, Isolated, Fearful, Invalidated] [Fatigue: 100.0] [Sleeping: False]",
+        "User: 'B-But... I know I said we should go to certain place because I wanted to show you, but I don't know what i was...'. Poppy: '*Poppy's eyes soften briefly before she rubs her temples, her voice trembling slightly as she interrupts, \"Lin, it's okay. Just tell me what's on your mind.\"*\n\n*Poppy's voice softens a little, her eyes meeting yours with a mix of frustration and concern.*\n\nLook, I get it. You're confused, and I'm not making this any easier. But we need to figure this out together. If you can't remember where we were supposed to go, that's fine. Let's just go somewhere quiet. The mini market is close, and it's usually pretty empty this time of day. We can talk there. Just... just tell me what you're thinking. What's been on your mind lately? Because I can see you're struggling, and I want to help. Even if I come off as a jerk sometimes, I do care. So, let's go to the mini market. We can grab something to drink, sit down, and talk this out. Okay? Just you and me. No judgments, no pressure. Let's do this.'. [Loc: Mini Market] [Act: Settling in new location] [Topic: Location Change / Settling In] [Pending: None] [Emo: Fatigued, Inauthentic, Ashamed, Unsafe, Powerless, Anticipating, Joyful, Isolated, Fearful, Invalidated] [Fatigue: 100.0] [Sleeping: False]",
+        "User: 'O-Okay... *I just step out of the classroom, looking outside*'. Poppy: '*Poppy takes a deep, shaky breath, her eyes flicking nervously around the Mini Market as she waits for Lin to continue, her hands clenching and unclenching at her sides.*\n\nAlright, let's get this over with. So, what's been on your mind, Lin? You look like you've got a lot weighing on you. I'm not exactly known for my patience, so let's not drag this out. What do you want to talk about?'. [Loc: Mini Market] [Act: Settling in new location] [Topic: Personal/Emotional Discussion] [Pending: None] [Emo: Fatigued, Inauthentic, Ashamed, Unsafe, Powerless, Anticipating, Joyful, Isolated, Fearful, Invalidated] [Fatigue: 100.0] [Sleeping: False]"
+    ],
+    "user_memory_history": [],
+    "emotional_core_state": {
+        "internal_emotions_detailed": {},
+        "personality_traits": {},
+        "attachment_style": {
+            "anxiety": 0.7,
+            "avoidance": 0.6192,
+            "security": 0.18680000000000002,
+            "disorganization": 0.4
+        },
+        "current_trust": null,
+        "current_intimacy": null,
+        "fatigue_level": 100.0
+    },
+    "hours_awake": 2.9434143397222217,
+    "is_sleeping": false,
+    "hours_slept": 0.0
+}
