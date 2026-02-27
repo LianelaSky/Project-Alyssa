@@ -195,6 +195,9 @@ class RPDialogueGenerator:
          # (Formatear memoria dinámica - sin cambios)
          dynamic_memory_list = context.get('dynamic_memory', [])
          dynamic_memory_str = "\n- ".join(dynamic_memory_list) if dynamic_memory_list else 'None'
+         long_term_summaries = context.get('long_term_summaries', [])
+         long_term_summaries_str = "\n- ".join(long_term_summaries) if long_term_summaries else 'None'
+         internal_objective = context.get('internal_objective', 'Maintain continuity and respond in-character.')
 
          # Construir el prompt
          prompt = (
@@ -213,6 +216,10 @@ class RPDialogueGenerator:
              f"{rag_context_str}\n"
              f"--- Most Recent Conversation Turns (Dynamic Memory) ---\n"
              f"- {dynamic_memory_str}\n"
+             f"--- Long-Term Summaries ---\n"
+             f"- {long_term_summaries_str}\n"
+             f"--- Internal Objective ---\n"
+             f"{internal_objective}\n"
              f"--- Interaction History ---\n"
              f"Previous action taken by {char_name}: {previous_action}\n"
              f"{user_name} just said: '{user_input}'\n\n"
