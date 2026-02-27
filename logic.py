@@ -78,6 +78,10 @@ class RPLogic:
         self.hours_slept = 0.0 # Horas continuas dormido
         # --- Fin Variables Ciclo ---
 
+        # --- Time-awareness state ---
+        self.location_entered_roleplay_time = self.current_roleplay_time
+        self.last_time_awareness_note = ""
+
         # --- Load General State (overwrites defaults) ---
         self._load_state() # Carga tiempo, estado explícito, memoria dinámica, estado de sueño, etc.
 
@@ -140,6 +144,17 @@ class RPLogic:
                 self.pending_location_target = state_data.get("pending_location_target", None)
                 self.current_topic_focus = state_data.get("current_topic_focus", "Unknown / Resumed")
                 self.logger.info("Loaded explicit state - Pending Location: %s, Topic Focus: %s", self.pending_location_target, self.current_topic_focus)
+
+                entered_time_str = state_data.get("location_entered_roleplay_time")
+                if entered_time_str:
+                    try:
+                        entered_time_clean = entered_time_str.split('+')[0].split('Z')[0].split('.')[0]
+                        self.location_entered_roleplay_time = datetime.datetime.fromisoformat(entered_time_clean)
+                    except ValueError:
+                        self.location_entered_roleplay_time = self.current_roleplay_time
+                else:
+                    self.location_entered_roleplay_time = self.current_roleplay_time
+                self.last_time_awareness_note = state_data.get("last_time_awareness_note", "")
 
                 # Load user memory history
                 if self.user_memory:
@@ -253,6 +268,8 @@ class RPLogic:
                 "is_sleeping": self.is_sleeping,
                 "hours_slept": self.hours_slept,
                 # --- Fin Guardado Ciclo ---
+                "location_entered_roleplay_time": self.location_entered_roleplay_time.isoformat() if self.location_entered_roleplay_time else None,
+                "last_time_awareness_note": self.last_time_awareness_note,
             }
             self.logger.debug("General state data prepared for saving.")
 
@@ -341,6 +358,37 @@ class RPLogic:
         else: self.logger.debug("Topic focus remains: '%s'", self.current_topic_focus)
 
 
+
+    def _build_time_awareness_note(self):
+        """Build a natural language time note for prompt conditioning."""
+        current_hour = self.current_roleplay_time.hour
+        if 0 <= current_hour < 5:
+            day_phase = "late night"
+        elif 5 <= current_hour < 12:
+            day_phase = "morning"
+        elif 12 <= current_hour < 18:
+            day_phase = "afternoon"
+        elif 18 <= current_hour < 22:
+            day_phase = "evening"
+        else:
+            day_phase = "night"
+
+        minutes_in_location = 0
+        if self.location_entered_roleplay_time:
+            minutes_in_location = max(0, int((self.current_roleplay_time - self.location_entered_roleplay_time).total_seconds() // 60))
+
+        notes = [f"It is currently {day_phase}."]
+        if minutes_in_location >= 30:
+            notes.append(f"You have been at this location for about {minutes_in_location} minutes.")
+        if self.is_sleeping:
+            notes.append("You are currently sleeping and not fully responsive.")
+        elif current_hour >= 23 or current_hour < 6:
+            notes.append("The hour is late; you may feel slower, more tired, or eager to wrap things up.")
+
+        note = " ".join(notes)
+        self.last_time_awareness_note = note
+        return note, day_phase, minutes_in_location
+
     def construct_context(self, user_input):
         """Constructs the context dictionary, including RAG memories and fatigue/sleep state from EC."""
         self.logger.debug("--- Logic: construct_context called ---")
@@ -358,6 +406,8 @@ class RPLogic:
         current_time_str = self.current_roleplay_time.strftime("%A, %I:%M %p")
         current_location = dyn_state.get('location', 'Unknown')
         self.logger.debug("Dynamic state fetched: %s", dyn_state)
+
+        time_awareness_note, day_phase, minutes_in_location = self._build_time_awareness_note()
 
         # --- RAG Retrieval ---
         retrieved_memories_text = []
@@ -381,6 +431,26 @@ class RPLogic:
             "recent_failure": any("fail" in mem.lower() for mem in dyn_state.get('recent_memories', '').split(" | ") if mem),
             "high_impact_event": any(word in user_input.lower() for word in ["die", "death", "gone", "kill", "razor", "cut", "suicide", "depress", "overdose", "scars"])
         }
+
+        # Bring in persisted long-term summaries (legacy path via ActiveMemory -> LongTermMemoryFile)
+        long_term_summaries = []
+        if self.long_term_memory_legacy:
+            try:
+                long_term_summaries = self.long_term_memory_legacy.get_memories()[-5:]
+            except Exception as ltm_err:
+                self.logger.warning("Could not fetch long-term summaries: %s", ltm_err)
+
+        # Lightweight internal objective to improve coherence and initiative
+        if context_flags["high_impact_event"]:
+            internal_objective = "Stabilize the moment emotionally while staying in character."
+        elif self.pending_location_target:
+            internal_objective = f"Complete transition toward {self.pending_location_target} and keep user engaged."
+        elif "Project" in self.current_topic_focus:
+            internal_objective = "Progress the project discussion with concrete next steps."
+        elif "Relationship" in self.current_topic_focus or "Emotional" in self.current_topic_focus:
+            internal_objective = "Deepen trust gradually without breaking character tone."
+        else:
+            internal_objective = "Maintain narrative continuity and move the scene forward."
         context_flags["current_topic"] = self.current_topic_focus
         context_flags["is_transitioning_location"] = bool(self.pending_location_target)
         # Pasar estado de sueño/fatiga (desde Logic/EC) a EC si este lo usa en sus cálculos
@@ -410,10 +480,15 @@ class RPLogic:
             "action": dyn_state.get('action', 'Unknown'),
             "topic_focus": self.current_topic_focus,
             "current_time_in_roleplay": current_time_str,
+            "day_phase": day_phase,
+            "minutes_in_location": minutes_in_location,
+            "time_awareness_note": time_awareness_note,
             "emotional_guidance": emotional_guidance,
             "previous_action": previous_narrative_action,
             "dynamic_memory": dyn_state.get('recent_memories', '').split(" | ") if dyn_state.get('recent_memories') else [],
             "retrieved_memories": retrieved_memories_text, # RAG results
+            "long_term_summaries": long_term_summaries,
+            "internal_objective": internal_objective,
             "user_name": user_state.get('name', 'User'),
             "user_input": user_input,
             "user_memories": self.user_memory.history[-3:] if self.user_memory and self.user_memory.history else [],
@@ -550,6 +625,7 @@ class RPLogic:
                 if current_loc_before_move != self.pending_location_target:
                     self.logger.info(f"AI ACTION indicates movement. Resolving pending location change: Moving from '{current_loc_before_move}' to '{self.pending_location_target}'")
                     self.dynamic_memory.update_location(self.pending_location_target, self.active_memory)
+                    self.location_entered_roleplay_time = self.current_roleplay_time
                     # Resetear acción/tema si el cambio es significativo (e.g., leaving school)
                     if current_loc_before_move in ["School", "Library", "Science Class"] and self.dynamic_memory.location not in ["School", "Library", "Science Class"]:
                          self.dynamic_memory.update_action("Settling in new location", self.active_memory)
