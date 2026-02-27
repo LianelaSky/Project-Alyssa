@@ -381,6 +381,26 @@ class RPLogic:
             "recent_failure": any("fail" in mem.lower() for mem in dyn_state.get('recent_memories', '').split(" | ") if mem),
             "high_impact_event": any(word in user_input.lower() for word in ["die", "death", "gone", "kill", "razor", "cut", "suicide", "depress", "overdose", "scars"])
         }
+
+        # Bring in persisted long-term summaries (legacy path via ActiveMemory -> LongTermMemoryFile)
+        long_term_summaries = []
+        if self.long_term_memory_legacy:
+            try:
+                long_term_summaries = self.long_term_memory_legacy.get_memories()[-5:]
+            except Exception as ltm_err:
+                self.logger.warning("Could not fetch long-term summaries: %s", ltm_err)
+
+        # Lightweight internal objective to improve coherence and initiative
+        if context_flags["high_impact_event"]:
+            internal_objective = "Stabilize the moment emotionally while staying in character."
+        elif self.pending_location_target:
+            internal_objective = f"Complete transition toward {self.pending_location_target} and keep user engaged."
+        elif "Project" in self.current_topic_focus:
+            internal_objective = "Progress the project discussion with concrete next steps."
+        elif "Relationship" in self.current_topic_focus or "Emotional" in self.current_topic_focus:
+            internal_objective = "Deepen trust gradually without breaking character tone."
+        else:
+            internal_objective = "Maintain narrative continuity and move the scene forward."
         context_flags["current_topic"] = self.current_topic_focus
         context_flags["is_transitioning_location"] = bool(self.pending_location_target)
         # Pasar estado de sueño/fatiga (desde Logic/EC) a EC si este lo usa en sus cálculos
@@ -414,6 +434,8 @@ class RPLogic:
             "previous_action": previous_narrative_action,
             "dynamic_memory": dyn_state.get('recent_memories', '').split(" | ") if dyn_state.get('recent_memories') else [],
             "retrieved_memories": retrieved_memories_text, # RAG results
+            "long_term_summaries": long_term_summaries,
+            "internal_objective": internal_objective,
             "user_name": user_state.get('name', 'User'),
             "user_input": user_input,
             "user_memories": self.user_memory.history[-3:] if self.user_memory and self.user_memory.history else [],
